@@ -1,5 +1,6 @@
-import Breadcrumb from '@/components/Breadcrumb';
 import { FC } from 'react';
+
+import Breadcrumb from '@/components/Breadcrumb';
 
 const Home: FC = () => {
   return (
