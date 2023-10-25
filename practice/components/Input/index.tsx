@@ -14,7 +14,7 @@ const Input: FC<InputProps> = ({
   ...props
 }) => {
   return (
-    <div className='mb-4'>
+    <>
       {label && (
         <label className='block w-full text-md font-bold text-primary leading-7 mb-1'>
           {label}
@@ -29,7 +29,7 @@ const Input: FC<InputProps> = ({
           <div className='flex items-center w-6 bg-primary'>{endDecorator}</div>
         )}
       </div>
-    </div>
+    </>
   );
 };
 
