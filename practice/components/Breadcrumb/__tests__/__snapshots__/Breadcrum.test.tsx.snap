@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb Component matches snapshot 1`] = `
+<div>
+  <nav
+    aria-label="breadcrumb"
+  >
+    <ol
+      class="flex w-fit text-sm text-primary"
+    >
+      <li
+        class=""
+      >
+        <a
+          class="hover:underline"
+        >
+          Home
+        </a>
+        <span
+          class="mx-6"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class=""
+      >
+        <a
+          class="hover:underline"
+        >
+          Products
+        </a>
+        <span
+          class="mx-6"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="font-primary-bold"
+      >
+        Category 1
+      </li>
+    </ol>
+  </nav>
+</div>
+`;

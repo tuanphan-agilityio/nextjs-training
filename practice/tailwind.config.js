@@ -32,6 +32,10 @@ module.exports = {
         'quaternary-regular': ['Roboto Regular', 'sans-serif'],
         'quaternary-bold': ['Roboto Bold', 'sans-serif'],
       },
+      gradientColorStops: {
+        'primary-gradient-start': '#7d89ff',
+        'primary-gradient-end': '#ab40ff',
+      },
     },
   },
   plugins: [],
