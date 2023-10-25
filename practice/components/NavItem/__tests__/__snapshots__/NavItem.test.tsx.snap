@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItem Component renders correctly when active 1`] = `
+<div>
+  <li
+    class="relative"
+  >
+    <a
+      class="after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:w-1 after:h-1 after:rounded-full after:bg-quaternary after:transform after:-translate-x-1/2 text-quaternary font-secondary-bold"
+      href="/mock-link"
+    >
+      Mock Link
+    </a>
+  </li>
+</div>
+`;
+
+exports[`NavItem Component renders correctly with mockProps and is not active 1`] = `
+<div>
+  <li
+    class="relative"
+  >
+    <a
+      class="hover:text-quaternary"
+      href="/mock-link"
+    >
+      Mock Link
+    </a>
+  </li>
+</div>
+`;
