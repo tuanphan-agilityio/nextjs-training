@@ -13,6 +13,7 @@ exports[`Breadcrumb Component matches snapshot 1`] = `
       >
         <a
           class="hover:underline"
+          href="/"
         >
           Home
         </a>
@@ -27,6 +28,7 @@ exports[`Breadcrumb Component matches snapshot 1`] = `
       >
         <a
           class="hover:underline"
+          href="/products"
         >
           Products
         </a>

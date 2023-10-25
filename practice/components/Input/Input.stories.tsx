@@ -14,12 +14,14 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'Name',
   placeholder: 'Enter your name',
+  className: 'rounded-lg border border-1 border-solid border-tertiary',
 };
 
 export const WithEndDecorator = Template.bind({});
 WithEndDecorator.args = {
-  className: 'max-w-[488px]',
+  className:
+    'max-w-[488px] rounded-lg border border-1 border-solid border-tertiary',
   label: 'Email',
   placeholder: 'Enter your email',
-  endDecorator: <div>@example.com</div>,
+  endDecorator: <div>Icon</div>,
 };
