@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Should show match Button DOM Snapshot 1`] = `
+<div>
+  <button
+    class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary"
+  >
+    Add To Cart
+  </button>
+</div>
+`;
