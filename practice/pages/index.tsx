@@ -1,10 +1,12 @@
 import { FC } from 'react';
 
 import Breadcrumb from '@/components/Breadcrumb';
+import Header from '@/components/Header';
 
 const Home: FC = () => {
   return (
     <main>
+      <Header />
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },

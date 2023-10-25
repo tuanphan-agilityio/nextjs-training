@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo Component renders correctly 1`] = `
+<div>
+  <a
+    class="flex items-center text-sm font-quaternary-bold"
+    href="/"
+  >
+    <svg
+      class="mr-1"
+      fill="none"
+      height="34"
+      width="36"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M35.046 0H.214A.215.215 0 0 0 0 .215V33.72c0 .12.096.216.214.216h34.832a.214.214 0 0 0 .214-.216V.215A.214.214 0 0 0 35.046 0Z"
+        fill="#0EC5D7"
+      />
+      <path
+        d="M9.32 7.468v18.999"
+        stroke="#fff"
+        stroke-width="3.082"
+      />
+      <path
+        d="M15.012 7.468v9.463"
+        stroke="#fff"
+        stroke-width="3.076"
+      />
+      <path
+        d="M19.349 7.469v3.214h5.432l3.94 8.143h3.55L26.634 7.469h-7.286Z"
+        fill="#fff"
+      />
+      <path
+        d="M20.963 14.167v12.677"
+        stroke="#fff"
+        stroke-width="3.56"
+      />
+    </svg>
+     mangcoding Store
+  </a>
+</div>
+`;

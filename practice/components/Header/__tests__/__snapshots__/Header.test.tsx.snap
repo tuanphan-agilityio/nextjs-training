@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders correctly 1`] = `
+<div>
+  <header
+    class="container flex justify-between items-center h-20 text-secondary"
+  >
+    <a
+      class="flex items-center text-sm font-quaternary-bold"
+      href="/"
+    >
+      <svg
+        class="mr-1"
+        fill="none"
+        height="34"
+        width="36"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M35.046 0H.214A.215.215 0 0 0 0 .215V33.72c0 .12.096.216.214.216h34.832a.214.214 0 0 0 .214-.216V.215A.214.214 0 0 0 35.046 0Z"
+          fill="#0EC5D7"
+        />
+        <path
+          d="M9.32 7.468v18.999"
+          stroke="#fff"
+          stroke-width="3.082"
+        />
+        <path
+          d="M15.012 7.468v9.463"
+          stroke="#fff"
+          stroke-width="3.076"
+        />
+        <path
+          d="M19.349 7.469v3.214h5.432l3.94 8.143h3.55L26.634 7.469h-7.286Z"
+          fill="#fff"
+        />
+        <path
+          d="M20.963 14.167v12.677"
+          stroke="#fff"
+          stroke-width="3.56"
+        />
+      </svg>
+       mangcoding Store
+    </a>
+    <div
+      class="flex gap-10"
+    >
+      <nav
+        aria-label="header-navigation"
+      >
+        <ul
+          class="flex items-center gap-10 h-full font-secondary-regular text-md"
+        >
+          <li
+            class="relative"
+          >
+            <a
+              class="after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:w-1 after:h-1 after:rounded-full after:bg-quaternary after:transform after:-translate-x-1/2 text-quaternary font-secondary-bold"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="relative"
+          >
+            <a
+              class="hover:text-quaternary"
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li
+            class="relative"
+          >
+            <a
+              class="hover:text-quaternary"
+              href="/about"
+            >
+              About Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <ul
+        class="flex items-center gap-6"
+      >
+        <li
+          class="hover:cursor-pointer"
+        >
+          <svg
+            fill="none"
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              stroke="#0D1222"
+            >
+              <path
+                d="M6.124 9.039a1.5 1.5 0 0 1 2.233-1.116l2.403 1.373a2.5 2.5 0 0 0 2.48 0l2.403-1.373a1.5 1.5 0 0 1 2.233 1.116l1.347 10.775a1.5 1.5 0 0 1-1.489 1.686H6.266a1.5 1.5 0 0 1-1.489-1.686L6.124 9.039Z"
+              />
+              <path
+                d="M15 6V4.01C15 2.896 14.008 2 12.799 2H11.2C9.981 2 9 2.906 9 4.01V6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                stroke-width="1.2"
+              />
+              <circle
+                cx="9"
+                cy="12"
+                r=".8"
+                stroke-width=".4"
+              />
+              <circle
+                cx="15"
+                cy="12"
+                r=".8"
+                stroke-width=".4"
+              />
+            </g>
+          </svg>
+        </li>
+        <li
+          class="hover:cursor-pointer"
+        >
+          <svg
+            fill="none"
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.755 3c-2.092 0-3.901 1.28-4.75 3.115C11.156 4.28 9.357 3 7.255 3 4.355 3 2 5.444 2 8.454c0 4.31 6.043 9.837 8.732 12.082a1.965 1.965 0 0 0 2.536 0C15.967 18.28 22 12.754 22 8.454 22.01 5.444 19.655 3 16.755 3Z"
+              stroke="#0D1222"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+              stroke-width="1.2"
+            />
+          </svg>
+        </li>
+        <li
+          class="hover:cursor-pointer"
+        >
+          <svg
+            fill="none"
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              stroke="#0D1222"
+            >
+              <circle
+                cx="12"
+                cy="7"
+                r="2.5"
+              />
+              <path
+                d="M5.5 19a6.5 6.5 0 1 1 13 0v.5h-13V19Z"
+              />
+            </g>
+          </svg>
+        </li>
+        <li
+          class="hover:cursor-pointer"
+        >
+          
+          <div
+            class="flex px-4 py-2 w-full bg-primary max-w-[250px] h-12 rounded-lg border border-1 border-solid border-tertiary"
+          >
+            <input
+              class="block w-full border-none focus:outline-none"
+              placeholder="Search"
+            />
+            <div
+              class="flex items-center w-6 bg-primary"
+            >
+              <svg
+                fill="none"
+                height="18"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="7.875"
+                  cy="7.875"
+                  r="5.063"
+                  stroke="#969696"
+                  stroke-width="1.125"
+                />
+                <rect
+                  fill="#969696"
+                  height="1"
+                  rx=".5"
+                  transform="rotate(45 11.869 11.162)"
+                  width="5.25"
+                  x="11.869"
+                  y="11.162"
+                />
+              </svg>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+</div>
+`;
