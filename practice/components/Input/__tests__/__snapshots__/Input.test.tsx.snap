@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component handles input and extracts input data 1`] = `
+<div>
+  <div
+    class="mb-4"
+  >
+    <label
+      class="block w-full text-md font-bold text-primary leading-7 mb-1"
+    >
+      Name
+    </label>
+    <div
+      class="flex px-4 py-2 w-full bg-primary"
+    >
+      <input
+        class="block w-full border-none focus:outline-none"
+        placeholder="Enter your name"
+      />
+      <div
+        class="flex items-center w-6 bg-primary"
+      >
+        <div>
+          End
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input Component renders correctly with a label and end decorator 1`] = `
+<div>
+  <div
+    class="mb-4"
+  >
+    <label
+      class="block w-full text-md font-bold text-primary leading-7 mb-1"
+    >
+      Name
+    </label>
+    <div
+      class="flex px-4 py-2 w-full bg-primary"
+    >
+      <input
+        class="block w-full border-none focus:outline-none"
+        placeholder="Enter your name"
+      />
+      <div
+        class="flex items-center w-6 bg-primary"
+      >
+        <div>
+          End
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input Component renders correctly without a label and end decorator 1`] = `
+<div>
+  <div
+    class="mb-4"
+  >
+    
+    <div
+      class="flex px-4 py-2 w-full bg-primary"
+    >
+      <input
+        class="block w-full border-none focus:outline-none"
+        placeholder="Placeholder Text"
+      />
+    </div>
+  </div>
+</div>
+`;
