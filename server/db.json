@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Smart T-shirt",
+      "price": 40,
+      "status": "Best quality",
+      "imgHref": "/images/images/product-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Smart T-shirt",
+      "price": 120,
+      "status": "Best quality",
+      "imgHref": "/images/images/product-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Smart T-shirt",
+      "price": 150,
+      "status": "Best quality",
+      "imgHref": "/images/images/product-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Smart T-shirt",
+      "price": 40,
+      "status": "Best quality",
+      "imgHref": "/images/images/product-1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Smart T-shirt",
+      "price": 120,
+      "status": "Best quality",
+      "imgHref": "/images/images/product-2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Smart T-shirt",
+      "price": 150,
+      "status": "Best quality",
+      "imgHref": "/images/images/product-3.jpg"
+    }
+  ]
+}
