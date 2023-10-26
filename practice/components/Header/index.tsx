@@ -12,30 +12,32 @@ const Header: FC = () => {
   );
 
   return (
-    <header className='container flex justify-between items-center h-20 text-secondary'>
-      <Logo />
+    <header className='h-20 shadow-lg shadow-tertiary text-secondary'>
+      <div className='container flex justify-between items-center h-full'>
+        <Logo />
 
-      <div className='flex gap-10'>
-        <nav aria-label='header-navigation'>
-          <ul className='flex items-center gap-10 h-full font-secondary-regular text-md'>
-            {navItems.map(({ title, href }) => (
-              <NavItem
-                key={href}
-                title={title}
-                href={href}
-                isActive={href === '/'}
-              />
+        <div className='flex gap-10'>
+          <nav aria-label='header-navigation'>
+            <ul className='flex items-center gap-10 h-full font-secondary-regular text-md'>
+              {navItems.map(({ title, href }) => (
+                <NavItem
+                  key={href}
+                  title={title}
+                  href={href}
+                  isActive={href === '/'}
+                />
+              ))}
+            </ul>
+          </nav>
+
+          <ul className='flex items-center gap-6'>
+            {controlItems.map((Icon, index) => (
+              <li className='hover:cursor-pointer' key={index}>
+                {Icon}
+              </li>
             ))}
           </ul>
-        </nav>
-
-        <ul className='flex items-center gap-6'>
-          {controlItems.map((Icon, index) => (
-            <li className='hover:cursor-pointer' key={index}>
-              {Icon}
-            </li>
-          ))}
-        </ul>
+        </div>
       </div>
     </header>
   );
