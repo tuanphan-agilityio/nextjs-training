@@ -6,7 +6,7 @@ import RateIcon from '../../public/icons/rate.svg';
 interface ProductCardProps {
   id: number;
   name: string;
-  price: string;
+  price: number;
   status: string;
   imgHref: string;
 }

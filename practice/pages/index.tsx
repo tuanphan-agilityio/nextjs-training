@@ -1,22 +1,67 @@
-import { FC } from 'react';
+import { FC, useCallback, useState, useMemo } from 'react';
+import { GetStaticProps } from 'next';
 
 import SubHeader from '@/components/SubHeader';
-
 import SidebarFilter from '@/components/SidebarFilter';
 import ProductCard from '@/components/ProductCard';
 import Button from '@/components/Button';
 
-const Home: FC = () => {
+import { Product } from '@/types/product';
+import { Pagination } from '@/types/common';
+import { getProducts } from '@/services/product';
+
+interface HomeProps {
+  products: Product[];
+  params: Pagination;
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const defaultParams: Pagination = { _page: 1, _limit: 3 };
+  const { data } = await getProducts(defaultParams);
+
+  return {
+    props: {
+      products: data,
+      params: defaultParams,
+    },
+  };
+};
+
+const Home: FC<HomeProps> = ({ products, params }) => {
+  const [productData, setProductData] = useState<{
+    products: Product[];
+    params: Pagination;
+  }>({
+    products,
+    params: {
+      ...params,
+      _page: params._page + 1,
+    },
+  });
+
+  const [isShowLoadMore, setIsShowLoadMore] = useState(true);
+
+  const handleLoadMore = useCallback(async () => {
+    const { data } = await getProducts(productData.params);
+
+    if (data.length > 0) {
+      setProductData(({ products, params }) => ({
+        products: [...products, ...data],
+        params: {
+          ...params,
+          _page: params._page + 1,
+        },
+      }));
+    } else {
+      setIsShowLoadMore(false);
+    }
+  }, [productData, setProductData]);
+
+  const breadCrumbItems = useMemo(() => [{ label: 'Home', href: '/' }], []);
+
   return (
     <main>
-      <SubHeader
-        title='Cart'
-        breadcrumbItems={[
-          { label: 'Home', href: '/' },
-          { label: 'Products', href: '/products' },
-          { label: 'Category 1' },
-        ]}
-      />
+      <SubHeader title='Cart' breadcrumbItems={breadCrumbItems} />
       <section className='container py-20'>
         <h2 className='mb-6 text-3xl font-secondary-bold leading-6'>
           T - Shirt
@@ -25,20 +70,24 @@ const Home: FC = () => {
           <SidebarFilter />
           <div className='text-center'>
             <article className='flex flex-wrap gap-10 pb-10'>
-              {Array(6)
-                .fill(null)
-                .map((_, index) => (
+              {productData.products.map(
+                ({ id, name, imgHref, status, price }) => (
                   <ProductCard
-                    key={index}
-                    id={index}
-                    imgHref='/images/product-1.jpg'
-                    name='Smart T-Shirt'
-                    status='Best quality'
-                    price='40'
+                    key={id}
+                    id={id}
+                    imgHref={imgHref}
+                    name={name}
+                    status={status}
+                    price={price}
                   />
-                ))}
+                ),
+              )}
             </article>
-            <Button className='text-center'>Load More</Button>
+            {isShowLoadMore && (
+              <Button className='text-center' onClick={handleLoadMore}>
+                Load More
+              </Button>
+            )}
           </div>
         </div>
       </section>
