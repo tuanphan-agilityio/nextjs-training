@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubHeader Component renders correctly with mockProps 1`] = `
+<div>
+  <section
+    class="pt-10 pb-20 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary"
+  >
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+      >
+        <ol
+          class="flex w-fit text-sm text-primary"
+        >
+          <li
+            class=""
+          >
+            <a
+              class="hover:underline"
+              href="/"
+            >
+              Home
+            </a>
+            <span
+              class="mx-6"
+            >
+              /
+            </span>
+          </li>
+          <li
+            class="font-primary-bold"
+          >
+            Products
+          </li>
+        </ol>
+      </nav>
+      <h1
+        class="mt-10 text-3xl font-secondary-bold leading-4"
+      >
+        Product Page
+      </h1>
+      <p
+        class="mt-6 font-md leading-2"
+      >
+        Browse our products
+      </p>
+    </div>
+  </section>
+</div>
+`;
