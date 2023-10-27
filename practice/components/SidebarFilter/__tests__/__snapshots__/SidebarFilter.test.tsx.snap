@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarFilter Component renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="flex items-center text-xl"
+    >
+      <p
+        class="font-primary-regular leading-4"
+      >
+        Filter
+      </p>
+      <svg
+        class="ml-2"
+        fill="none"
+        height="24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="#0D1222"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="10"
+          stroke-width="1.2"
+        >
+          <path
+            d="M15.38 7.4a1.9 1.9 0 1 0 0-3.8 1.9 1.9 0 0 0 0 3.8ZM17.27 5.5h3.17M2.6 5.5h10.88M7.9 13.76a1.9 1.9 0 1 0 0-3.8 1.9 1.9 0 0 0 0 3.8ZM9.8 11.86h10.64M2.6 11.86h3.41M15.38 20.12a1.9 1.9 0 1 0 0-3.8 1.9 1.9 0 0 0 0 3.8ZM17.27 18.22h3.17M2.6 18.22h10.88"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      class="mt-10"
+    >
+      <p
+        class="mb-3 text-md"
+      >
+        Categories
+      </p>
+      <ul
+        class="flex gap-4 pb-6 border-b-2 border-solid border-tertiary"
+      >
+        <li
+          class="px-2 py-1 bg-quaternary font-primary-bold text-primary border"
+        >
+          <a
+            href="/#"
+          >
+            Men
+          </a>
+        </li>
+        <li
+          class="px-2 py-1 text-secondary border border-tertiary"
+        >
+          <a
+            href="/#"
+          >
+            Women
+          </a>
+        </li>
+        <li
+          class="px-2 py-1 text-secondary border border-tertiary"
+        >
+          <a
+            href="/#"
+          >
+            Children
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
