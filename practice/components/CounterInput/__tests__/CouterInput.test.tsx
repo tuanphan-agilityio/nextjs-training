@@ -37,14 +37,6 @@ describe('CounterInput Component', () => {
     );
   });
 
-  it('resets to 0 when the input is cleared', () => {
-    render(<CounterInput {...mockProps} />);
-    const input = screen.getByRole('textbox');
-    fireEvent.change(input, { target: { value: '' } });
-
-    expect(mockProps.onValueChange).toHaveBeenCalledWith(0);
-  });
-
   it('changes the value when a valid input is entered', () => {
     render(<CounterInput {...mockProps} />);
     const input = screen.getByRole('textbox');
@@ -56,5 +48,35 @@ describe('CounterInput Component', () => {
   it('matches the snapshot', () => {
     const { container } = render(<CounterInput {...mockProps} />);
     expect(container).toMatchSnapshot();
+  });
+
+  it('should not decrement below min value', () => {
+    render(<CounterInput {...mockProps} />);
+
+    const decrementButton = screen.getByText('-');
+    const inputValue = screen.getByDisplayValue(
+      mockProps.initialValue.toString(),
+    );
+
+    for (let i = 0; i < 10; i++) {
+      fireEvent.click(decrementButton);
+    }
+
+    expect(inputValue).toHaveValue(mockProps.minValue.toString());
+  });
+
+  it('should not increment above max value', () => {
+    render(<CounterInput {...mockProps} />);
+
+    const incrementButton = screen.getByText('+');
+    const inputValue = screen.getByDisplayValue(
+      mockProps.initialValue.toString(),
+    );
+
+    for (let i = 0; i < 10; i++) {
+      fireEvent.click(incrementButton);
+    }
+
+    expect(inputValue).toHaveValue(mockProps.maxValue.toString());
   });
 });

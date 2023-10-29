@@ -12,26 +12,23 @@ import RateIcon from '../../public/icons/rate.svg';
 import TrolleyIcon from '../../public/icons/trolley.svg';
 import CartIcon from '../../public/icons/light-cart.svg';
 import { ROUTES } from '@/constants/routes';
+import { Product } from '@/types/product';
 
 interface ProductInfoProps {
-  name: string;
-  description: string;
-  price: number;
-  imageHrefs: string[];
+  product: Omit<Product, 'id' | 'status'>;
   onQuantityChange: (quantity: number) => void;
+  onAddToCard: () => void;
 }
 
 const ProductInfo: FC<ProductInfoProps> = ({
-  name,
-  description,
-  price,
-  imageHrefs,
+  product: { name, imgHrefs, thumbnail, description, price, stock },
   onQuantityChange,
+  onAddToCard,
 }) => {
   return (
     <div className='container flex gap-10'>
       <div className='w-1/2'>
-        <PreviewImages imageHrefs={imageHrefs} />
+        <PreviewImages imageHrefs={[thumbnail, ...imgHrefs]} />
       </div>
       <div className='flex flex-col justify-between py-6 w-1/2'>
         <div>
@@ -71,7 +68,7 @@ const ProductInfo: FC<ProductInfoProps> = ({
               <p className='font-primary-bold text-md'>Stock</p>
 
               <div className='flex items-center mt-4 text-md text-tertiary leading-6'>
-                ( 1234 ) <TrolleyIcon className='ml-2' />
+                ( {stock} ) <TrolleyIcon className='ml-2' />
               </div>
             </div>
           </div>
@@ -82,9 +79,9 @@ const ProductInfo: FC<ProductInfoProps> = ({
 
           <div className='flex justify-between items-center mt-8'>
             <CounterInput
-              initialValue={0}
-              minValue={0}
-              maxValue={1000}
+              initialValue={1}
+              minValue={1}
+              maxValue={stock}
               onValueChange={onQuantityChange}
             />
             <p className='font-secondary-bold text-3xl leading-8 '>
@@ -99,12 +96,8 @@ const ProductInfo: FC<ProductInfoProps> = ({
               </Link>
             </Button>
 
-            <Button className='h-[48px] shadow-lg'>
-              <Link href={'#'}>
-                <a>
-                  <CartIcon />
-                </a>
-              </Link>
+            <Button className='h-[48px] shadow-lg' onClick={onAddToCard}>
+              <CartIcon />
             </Button>
           </div>
         </div>

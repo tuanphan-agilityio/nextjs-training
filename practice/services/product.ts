@@ -7,4 +7,8 @@ const getProducts = (params?: Pagination) => {
   return axiosApp.get<Product[]>(ENDPOINTS.PRODUCTS, { params });
 };
 
-export { getProducts };
+const getProduct = (id: string) => {
+  return axiosApp.get<Product>(`${ENDPOINTS.PRODUCTS}/${id}`);
+};
+
+export { getProducts, getProduct };
