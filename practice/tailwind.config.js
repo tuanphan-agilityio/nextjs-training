@@ -13,6 +13,7 @@ module.exports = {
         secondary: '#0d1222',
         tertiary: '#969696',
         quaternary: '#5463ff',
+        quinary: '#f4f4f4',
         'footer-bg': '#393e46',
       },
       fontSize: {
