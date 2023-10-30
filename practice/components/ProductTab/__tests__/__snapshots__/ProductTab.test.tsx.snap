@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductTab Component should match the snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div>
+      <ul
+        class="flex justify-center gap-10"
+      >
+        <li
+          class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer text-quaternary border-b-4 border-quaternary"
+        >
+          Description
+        </li>
+        <li
+          class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer text-tertiary"
+        >
+          Review (5)
+        </li>
+      </ul>
+      <div
+        class="mt-4"
+      >
+        <div
+          class="text-md"
+        >
+          <p
+            class="text-secondary font-primary-bold"
+          >
+            Detail Product
+          </p>
+          <ul
+            class="mt-5 ml-6 list-disc"
+          >
+            <li
+              class="text-tertiary"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </li>
+            <li
+              class="text-tertiary"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </li>
+            <li
+              class="text-tertiary"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

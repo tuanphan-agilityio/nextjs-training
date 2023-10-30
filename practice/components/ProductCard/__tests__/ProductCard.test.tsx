@@ -6,7 +6,7 @@ describe('ProductCard Component', () => {
   const mockProps: ProductCardProps = {
     id: 1,
     name: 'Product Name',
-    price: '99.99',
+    price: 99.99,
     status: 'In Stock',
     imgHref: '/images/product-1.jpg',
   };

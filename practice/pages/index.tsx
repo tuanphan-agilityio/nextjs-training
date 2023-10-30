@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
   return {
     props: {
-      products: data,
+      products: data ?? [],
       params: defaultParams,
     },
   };
@@ -71,11 +71,11 @@ const Home: FC<HomeProps> = ({ products, params }) => {
           <div className='text-center'>
             <article className='flex flex-wrap gap-10 pb-10'>
               {productData.products.map(
-                ({ id, name, imgHref, status, price }) => (
+                ({ id, name, thumbnail, status, price }) => (
                   <ProductCard
                     key={id}
                     id={id}
-                    imgHref={imgHref}
+                    imgHref={thumbnail}
                     name={name}
                     status={status}
                     price={price}
