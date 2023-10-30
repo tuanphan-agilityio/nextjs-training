@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, FC, ReactElement, memo } from 'react';
+import { ButtonHTMLAttributes, FC, ReactElement, memo } from 'react';
 import clsx from 'clsx';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
