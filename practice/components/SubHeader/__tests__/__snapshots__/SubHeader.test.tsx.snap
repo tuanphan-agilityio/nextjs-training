@@ -42,7 +42,7 @@ exports[`SubHeader Component renders correctly with mockProps 1`] = `
         Product Page
       </h1>
       <p
-        class="mt-6 font-md leading-2"
+        class="mt-6 w-[508px] font-md leading-2"
       >
         Browse our products
       </p>
