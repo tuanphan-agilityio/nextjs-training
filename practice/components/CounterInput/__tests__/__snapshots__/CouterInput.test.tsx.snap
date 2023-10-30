@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterInput Component matches the snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary"
+  >
+    <button
+      class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+    >
+      -
+    </button>
+    
+    <div
+      class="flex px-4 py-2 w-full bg-primary"
+    >
+      <input
+        class="block w-full border-none focus:outline-none"
+        value="3"
+      />
+    </div>
+    <button
+      class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+    >
+      +
+    </button>
+  </div>
+</div>
+`;

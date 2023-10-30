@@ -81,7 +81,7 @@ const ProductDetail: FC = () => {
                 imgHref='/images/product-1.jpg'
                 name='Smart T-Shirt'
                 status='Best quality'
-                price='40'
+                price={40}
               />
             ))}
         </article>

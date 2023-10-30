@@ -21,6 +21,7 @@ const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
       alt='Product'
       onClick={() => handleImageClick(index)}
       objectFit='cover'
+      data-testid={`image-${index}`}
     />
   );
 
@@ -33,6 +34,7 @@ const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
         alt='Product'
         layout='fixed'
         objectFit='cover'
+        data-testid={`main-image-${currentSlideIdx}`}
       />
 
       <div className='flex gap-6 w-full overflow-auto'>
