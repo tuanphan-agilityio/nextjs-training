@@ -1,4 +1,4 @@
-import { FC, useCallback, useMemo, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 
 import SubHeader from '@/components/SubHeader';
 import Button from '@/components/Button';
@@ -6,27 +6,73 @@ import Input from '@/components/Input';
 import Modal from '@/components/Modal';
 import CartItem from '@/components/CartItem';
 
+import { LocalStorage } from '@/utils/storage';
+import { transformData } from '@/utils/cart';
+
+import { STORAGE_KEYS } from '@/constants/storage';
+
+import { CartProductItem, CartStorage } from '@/types/cart';
+
+import { getProductsByIds } from '@/services/product';
+
 const CartPage: FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [cart, setCart] = useState<CartProductItem[]>([]);
+
+  const [productIdConsiderDelete, setProductIdConsiderDelete] = useState<
+    number | null
+  >(null);
 
   const breadCrumbItems = useMemo(() => [{ label: 'Cart' }], []);
 
-  const handleQuantityChange = useCallback(() => {
-    // TODO: Handle quantity change
-  }, []);
+  const totalPrice = useMemo(() => {
+    return cart.reduce(
+      (accumulator, currentValue) =>
+        accumulator + currentValue.price * currentValue.quantity,
+      0,
+    );
+  }, [cart]);
 
-  const handleDeleteCartItem = useCallback(() => {
-    setIsModalOpen(true);
-    // TODO: Handle delete cart item
+  const handleQuantityChange = useCallback(
+    (value: number, id: number) => {
+      const updatedCart = cart.map((item) => {
+        if (item.productId === id) {
+          return { ...item, quantity: value };
+        }
+        return item;
+      });
+
+      setCart(updatedCart);
+    },
+    [setCart, cart],
+  );
+
+  const handleDeleteCartItem = useCallback((id: number) => {
+    setProductIdConsiderDelete(id);
   }, []);
 
   const handleOnCancelPopup = useCallback(() => {
-    setIsModalOpen(false);
+    setProductIdConsiderDelete(null);
   }, []);
 
   const handleOnOkPopup = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
+    if (productIdConsiderDelete) {
+      const updatedCart = cart.filter(
+        (item) => item.productId !== productIdConsiderDelete,
+      );
+
+      const cartStorages = LocalStorage.load(
+        STORAGE_KEYS.CART,
+      ) as CartStorage[];
+
+      const updatedCartStorages = cartStorages.filter(
+        (cartStorage) => cartStorage.productId !== productIdConsiderDelete,
+      );
+
+      LocalStorage.save(STORAGE_KEYS.CART, updatedCartStorages);
+      setCart(updatedCart);
+      setProductIdConsiderDelete(null);
+    }
+  }, [productIdConsiderDelete, cart]);
 
   const renderCheckout = useMemo(() => {
     return (
@@ -43,12 +89,12 @@ const CartPage: FC = () => {
             <p className='mb-2 font-secondary-bold'>Subtotal</p>
             <p className='text-tertiary'>4 Product</p>
           </div>
-          <p className='font-secondary-regular'>$ 160 USD</p>
+          <p className='font-secondary-regular'>$ {totalPrice} USD</p>
         </div>
 
         <div className='my-6 flex justify-between'>
           <p className='mb-2 font-secondary-bold'>Total</p>
-          <p className='font-secondary-regular'>$ 160 USD</p>
+          <p className='font-secondary-regular'>$ {totalPrice} USD</p>
         </div>
 
         <div className='text-right'>
@@ -56,6 +102,30 @@ const CartPage: FC = () => {
         </div>
       </div>
     );
+  }, [totalPrice]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const cartStorages = LocalStorage.load(
+          STORAGE_KEYS.CART,
+        ) as CartStorage[];
+
+        const productIds = cartStorages.map((cartStorage) =>
+          String(cartStorage.productId),
+        );
+
+        const quantities = cartStorages.map(
+          (cartStorage) => cartStorage.quantity,
+        );
+        const data = await getProductsByIds(productIds);
+
+        setCart(transformData(data, quantities));
+        // eslint-disable-next-line no-empty
+      } catch (error) {}
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -73,22 +143,25 @@ const CartPage: FC = () => {
 
           <div className='flex gap-10'>
             <div className='flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl'>
-              <CartItem
-                productId={1}
-                name='Smart T-Shirt'
-                price={40}
-                stock={1305}
-                quantity={2}
-                onQuantityChange={handleQuantityChange}
-                onDeleteCartItem={handleDeleteCartItem}
-              />
+              {cart.map(({ productId, name, price, stock, quantity }) => (
+                <CartItem
+                  key={productId}
+                  productId={productId}
+                  name={name}
+                  price={price}
+                  stock={stock}
+                  quantity={quantity}
+                  onQuantityChange={handleQuantityChange}
+                  onDeleteCartItem={handleDeleteCartItem}
+                />
+              ))}
             </div>
             {renderCheckout}
           </div>
         </div>
       </main>
       <Modal
-        isOpen={isModalOpen}
+        isOpen={!!productIdConsiderDelete}
         onCancel={handleOnCancelPopup}
         onOk={handleOnOkPopup}
         isConfirmModal

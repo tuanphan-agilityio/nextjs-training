@@ -7,7 +7,7 @@ import ProductCard from '@/components/ProductCard';
 import ProductTab from '@/components/ProductTab';
 
 import { Pagination } from '@/types/common';
-import { CartItem } from '@/types/cart';
+import { CartStorage } from '@/types/cart';
 import { Product } from '@/types/product';
 
 import { getProduct, getProducts } from '@/services/product';
@@ -19,10 +19,10 @@ interface ProductDetailProps {
 }
 
 const updateCart = (
-  cart: CartItem[],
+  cart: CartStorage[],
   productId: number,
   quantity: number,
-): CartItem[] => {
+): CartStorage[] => {
   const existingProductIndex = cart.findIndex(
     (cartProduct) => cartProduct.productId === productId,
   );
@@ -41,7 +41,7 @@ const updateCart = (
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const params: Pagination = { _page: 1, _limit: 4 };
-  const { data: products } = await getProducts(params);
+  const products = await getProducts(params);
 
   const paths = products.map((product) => ({
     params: { productId: String(product.id) },
@@ -60,9 +60,9 @@ export const getStaticProps: GetStaticProps<ProductDetailProps> = async ({
   if (!productId) return { notFound: true };
 
   try {
-    const response = await getProduct(String(productId));
+    const data = await getProduct(String(productId));
 
-    if (!response?.data) {
+    if (!data) {
       return {
         notFound: true,
       };
@@ -70,7 +70,7 @@ export const getStaticProps: GetStaticProps<ProductDetailProps> = async ({
 
     return {
       props: {
-        product: response?.data ?? {},
+        product: data ?? {},
       },
       revalidate: 60,
     };
@@ -90,7 +90,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
 
   const handleClickCart = useCallback(() => {
     const productId = product.id;
-    const cart: CartItem[] = LocalStorage.load(STORAGE_KEYS.CART) ?? [];
+    const cart: CartStorage[] = LocalStorage.load(STORAGE_KEYS.CART) ?? [];
 
     const updatedCart = updateCart(cart, productId, counterRef.current);
 
