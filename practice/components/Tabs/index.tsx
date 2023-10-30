@@ -54,6 +54,6 @@ const Tabs: FC<TabsProps> = ({
   );
 };
 
-export type { TabsProps };
+export type { TabsProps, Tab };
 
 export default memo(Tabs);
