@@ -19,7 +19,9 @@ const SubHeader: FC<SubHeaderProps> = ({
         <h1 className='mt-10 text-3xl font-secondary-bold leading-4'>
           {title}
         </h1>
-        {description && <p className='mt-6 font-md leading-2'>{description}</p>}
+        {description && (
+          <p className='mt-6 w-[508px] font-md leading-2'>{description}</p>
+        )}
       </div>
     </section>
   );

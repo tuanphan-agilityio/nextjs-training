@@ -3,7 +3,7 @@
 exports[`CounterInput Component matches the snapshot 1`] = `
 <div>
   <div
-    class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary"
+    class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary"
   >
     <button
       class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"

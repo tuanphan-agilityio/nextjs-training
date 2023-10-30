@@ -60,7 +60,7 @@ const CounterInput: FC<CounterInputProps> = ({
   const isMaxValue = count === maxValue;
 
   return (
-    <div className='flex items-center p-1 w-[142px] font-secondary-bold border border-secondary'>
+    <div className='flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary'>
       <Button
         onClick={handleDecrement}
         className={clsx(buttonStyles, isMinValue && 'hover:cursor-no-drop')}
