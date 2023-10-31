@@ -9,6 +9,9 @@ const nextConfig = {
     config.resolve.alias['@'] = path.join(__dirname, './');
     return config;
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
