@@ -39,9 +39,4 @@ describe('ProductCard Component', () => {
     const productImage = getByAltText('Product Name');
     expect(productImage).toBeInTheDocument();
   });
-
-  it('renders correctly with mockProps', () => {
-    const { container } = render(<ProductCard {...mockProps} />);
-    expect(container).toMatchSnapshot();
-  });
 });

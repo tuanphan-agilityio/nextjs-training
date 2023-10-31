@@ -37,6 +37,7 @@ exports[`PreviewImages Component matches the snapshot 1`] = `
         <noscript />
         <img
           alt="Product"
+          class="hover:cursor-pointer"
           data-testid="image-0"
           decoding="async"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
@@ -60,6 +61,7 @@ exports[`PreviewImages Component matches the snapshot 1`] = `
         <noscript />
         <img
           alt="Product"
+          class="hover:cursor-pointer"
           data-testid="image-1"
           decoding="async"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
@@ -83,6 +85,7 @@ exports[`PreviewImages Component matches the snapshot 1`] = `
         <noscript />
         <img
           alt="Product"
+          class="hover:cursor-pointer"
           data-testid="image-2"
           decoding="async"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
