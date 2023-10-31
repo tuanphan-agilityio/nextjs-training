@@ -21,6 +21,7 @@ const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
       alt='Product'
       onClick={() => handleImageClick(index)}
       objectFit='cover'
+      className='hover:cursor-pointer'
       data-testid={`image-${index}`}
     />
   );
