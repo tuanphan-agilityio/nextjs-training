@@ -26,7 +26,7 @@ const CartItem: FC<CartItemProps> = ({
   onDeleteCartItem,
 }) => {
   const handleQuantityChange = useCallback(
-    (value) => {
+    (value: number) => {
       onQuantityChange(value, productId);
     },
     [onQuantityChange, productId],
@@ -52,7 +52,7 @@ const CartItem: FC<CartItemProps> = ({
           Color : White
         </p>
       </hgroup>
-      <div className='w-[102px]'>
+      <div className='w-[152px]'>
         <p className='truncate mb-2'>$ {price} USD</p>
         <p className='font-secondary-regular text-tertiary text-md'>Price</p>
       </div>

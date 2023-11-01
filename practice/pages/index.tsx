@@ -17,7 +17,7 @@ interface HomeProps {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const defaultParams: Pagination = { _page: 1, _limit: 3 };
-  const { data } = await getProducts(defaultParams);
+  const data = await getProducts(defaultParams);
 
   return {
     props: {
@@ -42,7 +42,7 @@ const Home: FC<HomeProps> = ({ products, params }) => {
   const [isShowLoadMore, setIsShowLoadMore] = useState(true);
 
   const handleLoadMore = useCallback(async () => {
-    const { data } = await getProducts(productData.params);
+    const data = await getProducts(productData.params);
 
     if (data.length > 0) {
       setProductData(({ products, params }) => ({

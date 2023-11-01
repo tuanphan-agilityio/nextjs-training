@@ -1,6 +1,14 @@
-interface CartItem {
+import { Product } from './product';
+
+interface CartStorage {
   quantity: number;
   productId: number;
 }
 
-export type { CartItem };
+interface CartProductItem
+  extends CartStorage,
+    Pick<Product, 'name' | 'price' | 'thumbnail' | 'stock'> {
+  quantity: number;
+}
+
+export type { CartStorage, CartProductItem };
