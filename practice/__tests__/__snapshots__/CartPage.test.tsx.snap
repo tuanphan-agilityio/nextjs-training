@@ -467,7 +467,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             <p
               class="text-tertiary"
             >
-              4 Product
+              3
+               Product
             </p>
           </div>
           <p
