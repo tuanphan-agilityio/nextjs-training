@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound Page 404 Page matches DOM Snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center justify-center h-screen"
+  >
+    <div
+      class="pb-20 w-full text-center "
+    >
+      <h1
+        class="text-3xl"
+      >
+        Oops!
+      </h1>
+      <h2
+        class="text-secondary text-2xl"
+      >
+        404 - Page not found
+      </h2>
+      <p
+        class="mb-5 text-secondary text-sm"
+      >
+        The page you are looking for might have been removed had its name changed or is temporarily unavailable.
+      </p>
+      <button
+        class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary"
+      >
+        <a
+          href="/"
+        >
+          Go to Home Page
+        </a>
+      </button>
+    </div>
+  </div>
+</div>
+`;
