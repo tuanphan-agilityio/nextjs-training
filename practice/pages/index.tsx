@@ -95,4 +95,6 @@ const Home: FC<HomeProps> = ({ products, params }) => {
   );
 };
 
+export type { HomeProps };
+
 export default Home;

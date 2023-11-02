@@ -12,32 +12,12 @@ import { Product } from '@/types/product';
 
 import { getProduct, getProducts } from '@/services/product';
 import { LocalStorage } from '@/utils/storage';
+import { updateCart } from '@/utils/cart/updateCart';
 import { STORAGE_KEYS } from '@/constants/storage';
 
 interface ProductDetailProps {
   product: Product;
 }
-
-const updateCart = (
-  cart: CartStorage[],
-  productId: number,
-  quantity: number,
-): CartStorage[] => {
-  const existingProductIndex = cart.findIndex(
-    (cartProduct) => cartProduct.productId === productId,
-  );
-
-  if (existingProductIndex !== -1) {
-    cart[existingProductIndex].quantity += quantity;
-  } else {
-    cart.push({
-      productId: productId,
-      quantity: quantity,
-    });
-  }
-
-  return cart;
-};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const params: Pagination = { _page: 1, _limit: 4 };
@@ -140,5 +120,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
     </main>
   );
 };
+
+export type { ProductDetailProps };
 
 export default ProductDetail;

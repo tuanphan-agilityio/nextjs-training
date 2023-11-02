@@ -7,7 +7,7 @@ import Modal from '@/components/Modal';
 import CartItem from '@/components/CartItem';
 
 import { LocalStorage } from '@/utils/storage';
-import { transformData } from '@/utils/cart';
+import { transformData } from '@/utils/cart/transformData';
 
 import { STORAGE_KEYS } from '@/constants/storage';
 
