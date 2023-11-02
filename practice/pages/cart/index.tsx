@@ -107,9 +107,8 @@ const CartPage: FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const cartStorages = LocalStorage.load(
-          STORAGE_KEYS.CART,
-        ) as CartStorage[];
+        const cartStorages =
+          (LocalStorage.load(STORAGE_KEYS.CART) as CartStorage[]) ?? [];
 
         const productIds = cartStorages.map((cartStorage) =>
           String(cartStorage.productId),

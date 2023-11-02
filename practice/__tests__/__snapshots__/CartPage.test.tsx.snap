@@ -1,0 +1,510 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartPage Cart Page render correctly products 1`] = `
+<main>
+  <section
+    class="pt-10 pb-20 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary"
+  >
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+      >
+        <ol
+          class="flex w-fit text-sm text-primary"
+        >
+          <li
+            class="font-primary-bold"
+          >
+            Cart
+          </li>
+        </ol>
+      </nav>
+      <h1
+        class="mt-10 text-3xl font-secondary-bold leading-4"
+      >
+        Cart
+      </h1>
+      <p
+        class="mt-6 w-[508px] font-md leading-2"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget gravida leo, nec iaculis diam. Nam bibendum mi sed sem finibus ullamcorper.
+      </p>
+    </div>
+  </section>
+  <div
+    class="container py-20"
+  >
+    <h2
+      class="mb-10 text-3xl font-secondary-bold leading-6"
+    >
+      Cart Product
+    </h2>
+    <div
+      class="flex gap-10"
+    >
+      <div
+        class="flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl"
+      >
+        <div
+          class="flex justify-between p-10 bg-quinary"
+        >
+          <div
+            class="w-20 h-20"
+          >
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="box-sizing: border-box; display: block; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                  style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                />
+              </div>
+              <noscript />
+              <img
+                alt="Product"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+          </div>
+          <hgroup
+            class="w-[220px]"
+          >
+            <h3
+              class="mb-2 truncate"
+            >
+              Smart T-shirt
+            </h3>
+            <p
+              class="font-secondary-regular text-tertiary text-md"
+            >
+              Color : White
+            </p>
+          </hgroup>
+          <div
+            class="w-[152px]"
+          >
+            <p
+              class="truncate mb-2"
+            >
+              $ 
+              120
+               USD
+            </p>
+            <p
+              class="font-secondary-regular text-tertiary text-md"
+            >
+              Price
+            </p>
+          </div>
+          <div
+            class="w-[142px]"
+          >
+            <div
+              class="flex justify-between"
+            >
+              <div>
+                <p
+                  class="truncate mb-2"
+                >
+                  1305
+                </p>
+                <p
+                  class="font-secondary-regular text-tertiary text-md whitespace-nowrap"
+                >
+                  In Stock
+                </p>
+              </div>
+              <button
+                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 text-transparent font-primary-bold bg-clip-text bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary w-fit"
+                data-testid="delete-button"
+              >
+                <svg
+                  fill="none"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.53 21.13H7.06c-1.1 0-2-.9-2-2V5.61h13.47v13.52c0 1.1-.9 2-2 2ZM2.6 5.61h18.39M14.56 5.61V3.6c0-.55-.45-1-1-1h-3.54c-.55 0-1 .45-1 1v2.01M9.68 8.84v7.96M13.9 8.84v7.96"
+                    stroke="#0D1222"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="mt-11 text-md"
+            >
+              <div
+                class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary"
+              >
+                <button
+                  class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                >
+                  -
+                </button>
+                
+                <div
+                  class="flex px-4 py-2 w-full bg-primary"
+                >
+                  <input
+                    class="block w-full border-none focus:outline-none"
+                    value="2"
+                  />
+                </div>
+                <button
+                  class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between p-10 bg-quinary"
+        >
+          <div
+            class="w-20 h-20"
+          >
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="box-sizing: border-box; display: block; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                  style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                />
+              </div>
+              <noscript />
+              <img
+                alt="Product"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+          </div>
+          <hgroup
+            class="w-[220px]"
+          >
+            <h3
+              class="mb-2 truncate"
+            >
+              Smart T-shirt
+            </h3>
+            <p
+              class="font-secondary-regular text-tertiary text-md"
+            >
+              Color : White
+            </p>
+          </hgroup>
+          <div
+            class="w-[152px]"
+          >
+            <p
+              class="truncate mb-2"
+            >
+              $ 
+              120
+               USD
+            </p>
+            <p
+              class="font-secondary-regular text-tertiary text-md"
+            >
+              Price
+            </p>
+          </div>
+          <div
+            class="w-[142px]"
+          >
+            <div
+              class="flex justify-between"
+            >
+              <div>
+                <p
+                  class="truncate mb-2"
+                >
+                  1305
+                </p>
+                <p
+                  class="font-secondary-regular text-tertiary text-md whitespace-nowrap"
+                >
+                  In Stock
+                </p>
+              </div>
+              <button
+                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 text-transparent font-primary-bold bg-clip-text bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary w-fit"
+                data-testid="delete-button"
+              >
+                <svg
+                  fill="none"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.53 21.13H7.06c-1.1 0-2-.9-2-2V5.61h13.47v13.52c0 1.1-.9 2-2 2ZM2.6 5.61h18.39M14.56 5.61V3.6c0-.55-.45-1-1-1h-3.54c-.55 0-1 .45-1 1v2.01M9.68 8.84v7.96M13.9 8.84v7.96"
+                    stroke="#0D1222"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="mt-11 text-md"
+            >
+              <div
+                class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary"
+              >
+                <button
+                  class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                >
+                  -
+                </button>
+                
+                <div
+                  class="flex px-4 py-2 w-full bg-primary"
+                >
+                  <input
+                    class="block w-full border-none focus:outline-none"
+                    value="2"
+                  />
+                </div>
+                <button
+                  class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between p-10 bg-quinary"
+        >
+          <div
+            class="w-20 h-20"
+          >
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="box-sizing: border-box; display: block; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                  style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                />
+              </div>
+              <noscript />
+              <img
+                alt="Product"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+          </div>
+          <hgroup
+            class="w-[220px]"
+          >
+            <h3
+              class="mb-2 truncate"
+            >
+              Smart T-shirt
+            </h3>
+            <p
+              class="font-secondary-regular text-tertiary text-md"
+            >
+              Color : White
+            </p>
+          </hgroup>
+          <div
+            class="w-[152px]"
+          >
+            <p
+              class="truncate mb-2"
+            >
+              $ 
+              120
+               USD
+            </p>
+            <p
+              class="font-secondary-regular text-tertiary text-md"
+            >
+              Price
+            </p>
+          </div>
+          <div
+            class="w-[142px]"
+          >
+            <div
+              class="flex justify-between"
+            >
+              <div>
+                <p
+                  class="truncate mb-2"
+                >
+                  1305
+                </p>
+                <p
+                  class="font-secondary-regular text-tertiary text-md whitespace-nowrap"
+                >
+                  In Stock
+                </p>
+              </div>
+              <button
+                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 text-transparent font-primary-bold bg-clip-text bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary w-fit"
+                data-testid="delete-button"
+              >
+                <svg
+                  fill="none"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.53 21.13H7.06c-1.1 0-2-.9-2-2V5.61h13.47v13.52c0 1.1-.9 2-2 2ZM2.6 5.61h18.39M14.56 5.61V3.6c0-.55-.45-1-1-1h-3.54c-.55 0-1 .45-1 1v2.01M9.68 8.84v7.96M13.9 8.84v7.96"
+                    stroke="#0D1222"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="mt-11 text-md"
+            >
+              <div
+                class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary"
+              >
+                <button
+                  class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                >
+                  -
+                </button>
+                
+                <div
+                  class="flex px-4 py-2 w-full bg-primary"
+                >
+                  <input
+                    class="block w-full border-none focus:outline-none"
+                    value="2"
+                  />
+                </div>
+                <button
+                  class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-10 px-6 w-1/3 bg-quinary text-md"
+      >
+        <p
+          class="mb-2 font-secondary-bold"
+        >
+          Coupon Code
+        </p>
+        
+        <div
+          class="flex px-4 py-2 w-full bg-primary"
+        >
+          <input
+            class="block w-full border-none focus:outline-none"
+            placeholder="Enter your coupon code"
+          />
+        </div>
+        <div
+          class="text-right"
+        >
+          <button
+            class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary mt-4"
+          >
+            Check
+          </button>
+        </div>
+        <div
+          class="mt-9 pb-6 flex justify-between border-b-2 border-dashed border-tertiary"
+        >
+          <div>
+            <p
+              class="mb-2 font-secondary-bold"
+            >
+              Subtotal
+            </p>
+            <p
+              class="text-tertiary"
+            >
+              4 Product
+            </p>
+          </div>
+          <p
+            class="font-secondary-regular"
+          >
+            $ 
+            720
+             USD
+          </p>
+        </div>
+        <div
+          class="my-6 flex justify-between"
+        >
+          <p
+            class="mb-2 font-secondary-bold"
+          >
+            Total
+          </p>
+          <p
+            class="font-secondary-regular"
+          >
+            $ 
+            720
+             USD
+          </p>
+        </div>
+        <div
+          class="text-right"
+        >
+          <button
+            class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;

@@ -31,7 +31,7 @@ const ProductCard: FC<ProductCardProps> = ({
       <a>
         <section className='w-[256px] bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer'>
           <Image
-            src={imgHref ?? '/images/default.png'}
+            src={imgHref || '/images/default.png'}
             alt={name}
             width={'265px'}
             height={'248px'}

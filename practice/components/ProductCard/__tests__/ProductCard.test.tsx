@@ -39,4 +39,10 @@ describe('ProductCard Component', () => {
     const productImage = getByAltText('Product Name');
     expect(productImage).toBeInTheDocument();
   });
+
+  it('displays the default image when has not image', () => {
+    const { getByAltText } = render(<ProductCard {...mockProps} imgHref='' />);
+    const productImage = getByAltText('Product Name');
+    expect(productImage).toBeInTheDocument();
+  });
 });

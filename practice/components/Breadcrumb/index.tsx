@@ -25,16 +25,16 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items, className }) => {
               'font-primary-bold': isLastItem(index),
             })}
           >
-            {isLastItem(index) ? (
-              item.label
-            ) : (
-              <>
-                <Link href={item?.href ?? ''}>
-                  <a className='hover:underline'>{item.label}</a>
-                </Link>
-                <span className='mx-6'>/</span>
-              </>
-            )}
+            {isLastItem(index)
+              ? item.label
+              : item?.href && (
+                  <>
+                    <Link href={item?.href}>
+                      <a className='hover:underline'>{item.label}</a>
+                    </Link>
+                    <span className='mx-6'>/</span>
+                  </>
+                )}
           </li>
         ))}
       </ol>
