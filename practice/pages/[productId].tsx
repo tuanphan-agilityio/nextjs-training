@@ -1,6 +1,7 @@
 import { FC, useCallback, useMemo, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { toast } from 'react-toastify';
+import Head from 'next/head';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductInfo from '@/components/ProductInfo';
@@ -87,6 +88,9 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
 
   return (
     <main>
+      <Head>
+        <title>Product | {product.name}</title>
+      </Head>
       <div className='container py-10'>
         <Breadcrumb className='text-secondary' items={breadcrumbs} />
       </div>

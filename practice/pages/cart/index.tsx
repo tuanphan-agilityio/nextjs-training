@@ -1,4 +1,5 @@
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import Head from 'next/head';
 
 import SubHeader from '@/components/SubHeader';
 import Button from '@/components/Button';
@@ -125,6 +126,9 @@ const CartPage: FC = () => {
   return (
     <>
       <main>
+        <Head>
+          <title>Cart | Checkout</title>
+        </Head>
         <SubHeader
           title='Cart'
           breadcrumbItems={breadCrumbItems}

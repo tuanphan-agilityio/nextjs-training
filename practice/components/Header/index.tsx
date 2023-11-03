@@ -12,16 +12,16 @@ const Header: FC = () => {
   );
 
   return (
-    <header className='h-20 shadow-lg shadow-tertiary text-secondary'>
+    <header className='h-20 shadow-lg text-secondary'>
       <div className='container flex justify-between items-center h-full'>
         <Logo />
 
         <div className='flex gap-10'>
           <nav aria-label='header-navigation'>
             <ul className='flex items-center gap-10 h-full font-secondary-regular text-md'>
-              {navItems.map(({ title, href }) => (
+              {navItems.map(({ title, href }, index) => (
                 <NavItem
-                  key={href}
+                  key={index}
                   title={title}
                   href={href}
                   isActive={href === '/'}
