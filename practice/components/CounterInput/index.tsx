@@ -67,7 +67,7 @@ const CounterInput: FC<CounterInputProps> = ({
       >
         -
       </Button>
-      <Input value={count} onChange={handleInputChange} />
+      <Input align='center' value={count} onChange={handleInputChange} />
       <Button
         onClick={handleIncrement}
         className={clsx(buttonStyles, isMaxValue && 'hover:cursor-no-drop')}

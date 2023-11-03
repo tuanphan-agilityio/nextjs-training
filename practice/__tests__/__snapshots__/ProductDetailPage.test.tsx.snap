@@ -265,7 +265,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
                 class="flex px-4 py-2 w-full bg-primary"
               >
                 <input
-                  class="block w-full border-none focus:outline-none"
+                  class="block w-full border-none focus:outline-none text-center"
                   value="1"
                 />
               </div>

@@ -11,7 +11,7 @@ exports[`Input Component handles input and extracts input data 1`] = `
     class="flex px-4 py-2 w-full bg-primary"
   >
     <input
-      class="block w-full border-none focus:outline-none"
+      class="block w-full border-none focus:outline-none text-left"
       placeholder="Enter your name"
     />
     <div
@@ -36,7 +36,7 @@ exports[`Input Component renders correctly with a label and end decorator 1`] = 
     class="flex px-4 py-2 w-full bg-primary"
   >
     <input
-      class="block w-full border-none focus:outline-none"
+      class="block w-full border-none focus:outline-none text-left"
       placeholder="Enter your name"
     />
     <div
@@ -57,7 +57,7 @@ exports[`Input Component renders correctly without a label and end decorator 1`]
     class="flex px-4 py-2 w-full bg-primary"
   >
     <input
-      class="block w-full border-none focus:outline-none"
+      class="block w-full border-none focus:outline-none text-left"
       placeholder="Placeholder Text"
     />
   </div>

@@ -161,7 +161,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                   class="flex px-4 py-2 w-full bg-primary"
                 >
                   <input
-                    class="block w-full border-none focus:outline-none"
+                    class="block w-full border-none focus:outline-none text-center"
                     value="2"
                   />
                 </div>
@@ -288,7 +288,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                   class="flex px-4 py-2 w-full bg-primary"
                 >
                   <input
-                    class="block w-full border-none focus:outline-none"
+                    class="block w-full border-none focus:outline-none text-center"
                     value="2"
                   />
                 </div>
@@ -415,7 +415,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                   class="flex px-4 py-2 w-full bg-primary"
                 >
                   <input
-                    class="block w-full border-none focus:outline-none"
+                    class="block w-full border-none focus:outline-none text-center"
                     value="2"
                   />
                 </div>
@@ -442,7 +442,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
           class="flex px-4 py-2 w-full bg-primary"
         >
           <input
-            class="block w-full border-none focus:outline-none"
+            class="block w-full border-none focus:outline-none text-left"
             placeholder="Enter your coupon code"
           />
         </div>
