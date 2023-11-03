@@ -1,5 +1,6 @@
 import { FC, useCallback, useMemo, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+import { toast } from 'react-toastify';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductInfo from '@/components/ProductInfo';
@@ -14,6 +15,7 @@ import { getProduct, getProducts } from '@/services/product';
 import { LocalStorage } from '@/utils/storage';
 import { updateCart } from '@/utils/cart/updateCart';
 import { STORAGE_KEYS } from '@/constants/storage';
+import { TOAST_MESSAGES } from '@/constants/message';
 
 interface ProductDetailProps {
   product: Product;
@@ -75,6 +77,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
     const updatedCart = updateCart(cart, productId, counterRef.current);
 
     LocalStorage.save(STORAGE_KEYS.CART, updatedCart);
+    toast.success(TOAST_MESSAGES.UPDATED_CART);
   }, [product.id]);
 
   const breadcrumbs = useMemo(

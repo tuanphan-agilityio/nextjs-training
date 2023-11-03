@@ -15,6 +15,8 @@ import { CartProductItem, CartStorage } from '@/types/cart';
 
 import { getProductsByIds } from '@/services/product';
 
+import { updateLocalStorageCart } from '@/utils/cart/updateLocalStorageCart';
+
 const CartPage: FC = () => {
   const [cart, setCart] = useState<CartProductItem[]>([]);
 
@@ -41,6 +43,7 @@ const CartPage: FC = () => {
         return item;
       });
 
+      updateLocalStorageCart(updatedCart);
       setCart(updatedCart);
     },
     [setCart, cart],
@@ -60,15 +63,7 @@ const CartPage: FC = () => {
         (item) => item.productId !== productIdConsiderDelete,
       );
 
-      const cartStorages = LocalStorage.load(
-        STORAGE_KEYS.CART,
-      ) as CartStorage[];
-
-      const updatedCartStorages = cartStorages.filter(
-        (cartStorage) => cartStorage.productId !== productIdConsiderDelete,
-      );
-
-      LocalStorage.save(STORAGE_KEYS.CART, updatedCartStorages);
+      updateLocalStorageCart(updatedCart);
       setCart(updatedCart);
       setProductIdConsiderDelete(null);
     }
@@ -87,7 +82,7 @@ const CartPage: FC = () => {
         <div className='mt-9 pb-6 flex justify-between border-b-2 border-dashed border-tertiary'>
           <div>
             <p className='mb-2 font-secondary-bold'>Subtotal</p>
-            <p className='text-tertiary'>4 Product</p>
+            <p className='text-tertiary'>{cart.length} Product</p>
           </div>
           <p className='font-secondary-regular'>$ {totalPrice} USD</p>
         </div>
@@ -102,7 +97,7 @@ const CartPage: FC = () => {
         </div>
       </div>
     );
-  }, [totalPrice]);
+  }, [cart.length, totalPrice]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -142,18 +137,21 @@ const CartPage: FC = () => {
 
           <div className='flex gap-10'>
             <div className='flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl'>
-              {cart.map(({ productId, name, price, stock, quantity }) => (
-                <CartItem
-                  key={productId}
-                  productId={productId}
-                  name={name}
-                  price={price}
-                  stock={stock}
-                  quantity={quantity}
-                  onQuantityChange={handleQuantityChange}
-                  onDeleteCartItem={handleDeleteCartItem}
-                />
-              ))}
+              {cart.map(
+                ({ productId, name, price, stock, quantity, thumbnail }) => (
+                  <CartItem
+                    key={productId}
+                    productId={productId}
+                    name={name}
+                    price={price}
+                    stock={stock}
+                    quantity={quantity}
+                    imgHref={thumbnail}
+                    onQuantityChange={handleQuantityChange}
+                    onDeleteCartItem={handleDeleteCartItem}
+                  />
+                ),
+              )}
             </div>
             {renderCheckout}
           </div>

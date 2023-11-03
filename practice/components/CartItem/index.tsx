@@ -12,6 +12,7 @@ interface CartItemProps {
   price: number;
   stock: number;
   quantity: number;
+  imgHref: string;
   onQuantityChange: (value: number, productId: number) => void;
   onDeleteCartItem: (productId: number) => void;
 }
@@ -22,6 +23,7 @@ const CartItem: FC<CartItemProps> = ({
   price,
   stock,
   quantity,
+  imgHref,
   onQuantityChange,
   onDeleteCartItem,
 }) => {
@@ -42,7 +44,7 @@ const CartItem: FC<CartItemProps> = ({
         <Image
           width={80}
           height={80}
-          src='/images/product-1.jpg'
+          src={imgHref || '/images/product-1.jpg'}
           alt='Product'
         />
       </div>

@@ -2,7 +2,7 @@ import { CartProductItem } from '@/types/cart';
 import { Product } from '@/types/product';
 
 const transformData = (
-  data: Product[] = [],
+  data: Product[],
   quantities: number[],
 ): CartProductItem[] => {
   const transformedCart: CartProductItem[] = data.map(
