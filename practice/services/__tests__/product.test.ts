@@ -4,7 +4,7 @@ import { ENDPOINTS } from '@/constants/endpoints';
 
 import axiosApp from '../axiosApp';
 
-import { getProducts, getProduct, getProductsByIds } from '../product';
+import { getProducts, getProduct } from '../product';
 import { MOCK_PRODUCT, MOCK_PRODUCTS } from '@/__mocks__/product';
 
 describe('Product Service', () => {
@@ -36,20 +36,6 @@ describe('Product Service', () => {
     const product = await getProduct(productId);
 
     expect(product).toEqual(MOCK_PRODUCT);
-  });
-
-  it('should fetch products by IDs correctly', async () => {
-    const productIds = ['1', '2', '3'];
-
-    productIds.forEach((productId, index) => {
-      axiosMock
-        .onGet(`${ENDPOINTS.PRODUCTS}/${productId}`)
-        .reply(200, MOCK_PRODUCTS[index]);
-    });
-
-    const products = await getProductsByIds(productIds);
-
-    expect(products).toEqual(MOCK_PRODUCTS);
   });
 
   it('should handle errors when fetching products', async () => {

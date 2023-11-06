@@ -1,13 +1,14 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import CartPage from '@/pages/cart/index';
 import { act } from 'react-dom/test-utils';
-import { MOCK_PRODUCTS } from '@/__mocks__/product';
+import { MOCK_PRODUCT } from '@/__mocks__/product';
 import { CART_STORAGES } from '@/__mocks__/cart';
 
 jest.mock('@/services/product', () => ({
-  getProductsByIds: jest.fn(() => {
-    return MOCK_PRODUCTS;
-  }),
+  getProduct: jest.fn().mockImplementation((productId: string) => ({
+    ...MOCK_PRODUCT,
+    id: productId,
+  })),
 }));
 
 describe('CartPage', () => {
@@ -25,11 +26,11 @@ describe('CartPage', () => {
   });
 
   it('should delete a product from the cart', async () => {
-    localStorage.setItem('shop_cart', JSON.stringify([CART_STORAGES]));
+    window.localStorage.setItem('shop_cart', JSON.stringify(CART_STORAGES));
 
     render(<CartPage />);
 
-    await screen.findByText('Cart Product');
+    await screen.findAllByText('Cart Product');
 
     expect(screen.getAllByText('Smart T-shirt')[0]).toBeInTheDocument();
 
@@ -46,7 +47,7 @@ describe('CartPage', () => {
     });
 
     expect(await screen.findAllByText('Smart T-shirt')).toHaveLength(
-      MOCK_PRODUCTS.length - 1,
+      CART_STORAGES.length - 1,
     );
   });
 });

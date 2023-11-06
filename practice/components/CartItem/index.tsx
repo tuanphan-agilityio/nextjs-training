@@ -39,26 +39,26 @@ const CartItem: FC<CartItemProps> = ({
   }, [onDeleteCartItem, productId]);
 
   return (
-    <div className='flex justify-between p-10 bg-quinary'>
-      <div className='w-20 h-20'>
+    <ul className='flex justify-between p-10 bg-quinary'>
+      <li className='w-20 h-20'>
         <Image
           width={80}
           height={80}
           src={imgHref || '/images/product-1.jpg'}
           alt='Product'
         />
-      </div>
-      <hgroup className='w-[220px]'>
+      </li>
+      <li className='w-[220px]'>
         <h3 className='mb-2 truncate'>{name}</h3>
         <p className='font-secondary-regular text-tertiary text-md'>
           Color : White
         </p>
-      </hgroup>
-      <div className='w-[152px]'>
+      </li>
+      <li className='w-[152px]'>
         <p className='truncate mb-2'>$ {price} USD</p>
         <p className='font-secondary-regular text-tertiary text-md'>Price</p>
-      </div>
-      <div className='w-[142px]'>
+      </li>
+      <li className='w-[142px]'>
         <div className='flex justify-between'>
           <div>
             <p className='truncate mb-2'>{stock}</p>
@@ -83,8 +83,8 @@ const CartItem: FC<CartItemProps> = ({
             onValueChange={handleQuantityChange}
           />
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 };
 

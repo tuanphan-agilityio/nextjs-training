@@ -7,12 +7,13 @@ import PreviewImages from '@/components/PreviewImages';
 import CounterInput from '@/components/CounterInput';
 
 import { SIZES } from '@/constants/product';
+import { ROUTES } from '@/constants/routes';
+
+import { Product } from '@/types/product';
 
 import RateIcon from '../../public/icons/rate.svg';
 import TrolleyIcon from '../../public/icons/trolley.svg';
 import CartIcon from '../../public/icons/light-cart.svg';
-import { ROUTES } from '@/constants/routes';
-import { Product } from '@/types/product';
 
 interface ProductInfoProps {
   product: Omit<Product, 'id' | 'status'>;

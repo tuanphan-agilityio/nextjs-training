@@ -1,11 +1,10 @@
 import { FC, useCallback, useMemo, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import Head from 'next/head';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductInfo from '@/components/ProductInfo';
-import ProductCard from '@/components/ProductCard';
 import ProductTab from '@/components/ProductTab';
 
 import { Pagination } from '@/types/common';
@@ -87,44 +86,26 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
   );
 
   return (
-    <main>
-      <Head>
-        <title>Product | {product.name}</title>
-      </Head>
-      <div className='container py-10'>
-        <Breadcrumb className='text-secondary' items={breadcrumbs} />
-      </div>
-      <ProductInfo
-        product={product}
-        onQuantityChange={handleQuantityChange}
-        onAddToCard={handleClickCart}
-      />
+    <>
+      <main>
+        <Head>
+          <title>Product | {product.name}</title>
+        </Head>
+        <div className='container py-10'>
+          <Breadcrumb className='text-secondary' items={breadcrumbs} />
+        </div>
+        <ProductInfo
+          product={product}
+          onQuantityChange={handleQuantityChange}
+          onAddToCard={handleClickCart}
+        />
 
-      <div className='my-20 py-10 bg-quinary'>
-        <ProductTab />
-      </div>
-
-      <div className='container'>
-        <h2 className='mb-10 font-secondary-bold text-center text-3xl leading-8'>
-          Same Product
-        </h2>
-
-        <article className='flex flex-wrap gap-10 pb-10'>
-          {Array(8)
-            .fill(null)
-            .map((_, index) => (
-              <ProductCard
-                key={index}
-                id={index}
-                imgHref='/images/product-1.jpg'
-                name='Smart T-Shirt'
-                status='Best quality'
-                price={40}
-              />
-            ))}
-        </article>
-      </div>
-    </main>
+        <div className='my-20 py-10 bg-quinary'>
+          <ProductTab />
+        </div>
+      </main>
+      <ToastContainer />
+    </>
   );
 };
 

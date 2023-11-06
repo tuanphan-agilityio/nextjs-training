@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC, memo, useMemo } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 
@@ -13,7 +13,10 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ items, className }) => {
-  const isLastItem = (index: number) => index === items.length - 1;
+  const isLastItem = useMemo(
+    () => (index: number) => index === items.length - 1,
+    [items.length],
+  );
 
   return (
     <nav aria-label='breadcrumb'>

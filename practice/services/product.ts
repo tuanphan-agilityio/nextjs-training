@@ -17,10 +17,4 @@ const getProduct = async (id: string): Promise<Product> => {
   return response;
 };
 
-const getProductsByIds = async (productIds: string[]): Promise<Product[]> => {
-  const productRequests = productIds.map((productId) => getProduct(productId));
-  const products: Product[] = await Promise.all(productRequests);
-  return products;
-};
-
-export { getProducts, getProduct, getProductsByIds };
+export { getProducts, getProduct };
