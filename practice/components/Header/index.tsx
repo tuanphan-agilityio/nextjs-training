@@ -19,7 +19,7 @@ const Header: FC = () => {
         <Logo />
 
         <div className='flex gap-10 sm:gap-4'>
-          <nav className='md:hidden' aria-label='header-navigation'>
+          <nav className='lg:hidden' aria-label='header-navigation'>
             <ul className='flex items-center gap-10 h-full font-secondary-regular text-md'>
               {navItems.map(({ title, href }, index) => (
                 <NavItem
@@ -39,7 +39,7 @@ const Header: FC = () => {
             ))}
           </ul>
 
-          <div className='hidden md:flex md:items-center'>
+          <div className='hidden lg:flex lg:items-center'>
             <BarIcon />
           </div>
         </div>

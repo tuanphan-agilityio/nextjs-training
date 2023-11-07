@@ -9,18 +9,18 @@ module.exports = {
 
   theme: {
     screens: {
-      '2xl': { max: '1536px' },
-      xl: { max: '1280px' },
-      lg: { max: '1024px' },
-      md: { max: '768px' },
-      sm: { max: '640px' },
+      '2xl': { max: '1535px' },
+      xl: { max: '1279px' },
+      lg: { max: '1023px' },
+      md: { max: '767px' },
+      sm: { max: '639px' },
     },
     extend: {
       colors: {
         primary: '#fff',
         secondary: '#0d1222',
         tertiary: '#595959',
-        quaternary: '#5463ff',
+        quaternary: '#0a21ff',
         quinary: '#f4f4f4',
         'footer-bg': '#393e46',
       },

@@ -39,7 +39,7 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
         T - Shirt
       </h2>
       <div
-        class="flex gap-12 md:flex-col"
+        class="flex gap-12 xl:flex-col"
       >
         <div>
           <div

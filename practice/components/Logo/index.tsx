@@ -8,7 +8,10 @@ import LogoIcon from '../../public/icons/logo.svg';
 const Logo: FC = () => {
   return (
     <Link href={ROUTES.HOME}>
-      <a className='flex items-center text-sm font-quaternary-bold'>
+      <a
+        aria-label='go to home page'
+        className='flex items-center text-sm font-quaternary-bold'
+      >
         <LogoIcon className='mr-1' />{' '}
         <span className='sm:hidden'>mangcoding Store</span>
       </a>

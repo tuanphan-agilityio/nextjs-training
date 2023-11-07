@@ -75,6 +75,7 @@ const CartItem: FC<CartItemProps> = ({
 
         <div className='mt-11 text-md md:mt-6 sm:mt-2 sm:text-sm'>
           <CounterInput
+            minValue={1}
             initialValue={quantity}
             onValueChange={handleQuantityChange}
           />

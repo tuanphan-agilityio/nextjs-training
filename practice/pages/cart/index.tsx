@@ -71,11 +71,11 @@ const CartPage: FC = () => {
 
   const renderCheckout = useMemo(() => {
     return (
-      <div className='py-10 px-6 w-1/3 bg-quinary text-md md:w-full'>
+      <div className='py-10 px-6 w-1/3 bg-quinary text-md lg:w-full'>
         <p className='mb-2 font-secondary-bold'>Coupon Code</p>
         <Input placeholder='Enter your coupon code' />
 
-        <div className='text-right'>
+        <div className='text-right sm:text-center'>
           <Button className='mt-4'>Check</Button>
         </div>
 
@@ -92,7 +92,7 @@ const CartPage: FC = () => {
           <p className='font-secondary-regular'>$ {totalPrice} USD</p>
         </div>
 
-        <div className='text-right'>
+        <div className='text-right sm:text-center'>
           <Button>Checkout</Button>
         </div>
       </div>
@@ -117,8 +117,6 @@ const CartPage: FC = () => {
           productIds.map((productId) => getProduct(productId)),
         );
 
-        console.log('data', data);
-
         setCart(transformData(data, quantities));
         // eslint-disable-next-line no-empty
       } catch (error) {}
@@ -138,11 +136,11 @@ const CartPage: FC = () => {
           breadcrumbItems={breadCrumbItems}
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget gravida leo, nec iaculis diam. Nam bibendum mi sed sem finibus ullamcorper.'
         />
-        <div className='container py-20 xl:py-16 md:py-12 md:my-6 sm:py-4'>
+        <div className='container py-20 xl:py-16 lg:py-12 md:my-6 sm:py-4'>
           <h2 className='mb-10 text-3xl font-secondary-bold '>Cart Product</h2>
 
-          <div className='flex gap-10 xl:gap-4 md:flex-col'>
-            <div className='flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl md:w-full sm:text-sm'>
+          <div className='flex gap-10 lg:gap-4 lg:flex-col'>
+            <div className='flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl lg:w-full sm:text-sm'>
               {cart.map(
                 ({ productId, name, price, stock, quantity, thumbnail }) => (
                   <CartItem

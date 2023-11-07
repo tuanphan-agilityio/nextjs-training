@@ -24,7 +24,7 @@ const Footer: FC = () => {
             </Button>
           </div>
         </div>
-        <div className='w-2/3 flex gap-x-20 xl:gap-x-16 md:flex-wrap md:gap-y-10 sm:mt-6 sm:w-full sm:gap-y-4 sm:justify-center'>
+        <div className='w-2/3 flex gap-x-20 lg:gap-x-16 lg:flex-wrap lg:gap-y-10 sm:mt-6 sm:w-full sm:gap-y-4 sm:justify-center'>
           {FOOTER_CATEGORIES.map(
             ({ items, title, isContact = false, email = '' }) => (
               <div key={title}>

@@ -9,7 +9,7 @@ const TAB_ITEMS = [
           {Array(3)
             .fill('Lorem ipsum dolor sit amet, consectetur adipiscing elit')
             .map((item, index) => (
-              <li key={index} className='text-tertiary'>
+              <li key={index} className='text-secondary'>
                 {item}
               </li>
             ))}

@@ -20,8 +20,6 @@ describe('useEscapeKey', () => {
 
     const { container } = render(<TestComponent />);
 
-    console.log('container', container);
-
     fireEvent.keyDown(container, {
       key: 'Escape',
       code: 'Escape',
