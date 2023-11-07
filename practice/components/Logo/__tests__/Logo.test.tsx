@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react';
 
 import Logo from '..';
-import { ROUTES } from '@/constants/routes';
 
 describe('Logo Component', () => {
   it('renders correctly', () => {
