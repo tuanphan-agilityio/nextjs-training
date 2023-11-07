@@ -24,10 +24,10 @@ const getNavItems = () => [
 
 const getControlItems = () => [
   <CartIcon />,
-  <WishlistIcon />,
-  <UserIcon />,
+  <WishlistIcon className='sm:hidden' />,
+  <UserIcon className='sm:hidden' />,
   <Input
-    className='max-w-[250px] h-12 rounded-lg border border-1 border-solid border-tertiary'
+    className='max-w-[250px] h-12 rounded-lg border border-1 border-solid border-tertiary sm:w-[180px] sm:h-10'
     placeholder='Search'
     endDecorator={<SearchIcon />}
   />,

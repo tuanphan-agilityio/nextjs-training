@@ -3,7 +3,7 @@
 exports[`Header Component renders correctly 1`] = `
 <div>
   <header
-    class="h-20 shadow-lg text-secondary"
+    class="h-20 shadow-lg text-secondary sm:h-14"
   >
     <div
       class="container flex justify-between items-center h-full"
@@ -43,13 +43,19 @@ exports[`Header Component renders correctly 1`] = `
             stroke-width="3.56"
           />
         </svg>
-         mangcoding Store
+         
+        <span
+          class="sm:hidden"
+        >
+          mangcoding Store
+        </span>
       </a>
       <div
-        class="flex gap-10"
+        class="flex gap-10 sm:gap-4"
       >
         <nav
           aria-label="header-navigation"
+          class="md:hidden"
         >
           <ul
             class="flex items-center gap-10 h-full font-secondary-regular text-md"
@@ -87,7 +93,7 @@ exports[`Header Component renders correctly 1`] = `
           </ul>
         </nav>
         <ul
-          class="flex items-center gap-6"
+          class="flex items-center gap-6 sm:flex-row-reverse sm:gap-1"
         >
           <li
             class="hover:cursor-pointer"
@@ -130,6 +136,7 @@ exports[`Header Component renders correctly 1`] = `
             class="hover:cursor-pointer"
           >
             <svg
+              class="sm:hidden"
               fill="none"
               height="24"
               width="24"
@@ -149,6 +156,7 @@ exports[`Header Component renders correctly 1`] = `
             class="hover:cursor-pointer"
           >
             <svg
+              class="sm:hidden"
               fill="none"
               height="24"
               width="24"
@@ -173,7 +181,7 @@ exports[`Header Component renders correctly 1`] = `
           >
             
             <div
-              class="flex px-4 py-2 w-full bg-primary max-w-[250px] h-12 rounded-lg border border-1 border-solid border-tertiary"
+              class="flex px-4 py-2 w-full bg-primary max-w-[250px] h-12 rounded-lg border border-1 border-solid border-tertiary sm:w-[180px] sm:h-10"
             >
               <input
                 class="block w-full border-none focus:outline-none text-left"
@@ -209,6 +217,19 @@ exports[`Header Component renders correctly 1`] = `
             </div>
           </li>
         </ul>
+        <div
+          class="hidden md:flex md:items-center"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </header>

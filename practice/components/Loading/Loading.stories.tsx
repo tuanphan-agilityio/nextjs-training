@@ -4,7 +4,7 @@ import { FC } from 'react';
 import Loading from '.';
 
 export default {
-  title: 'Components/Loading',
+  title: 'Loading',
   component: Loading,
 } as Meta;
 

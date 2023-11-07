@@ -3,13 +3,13 @@
 exports[`Footer Component renders correctly 1`] = `
 <div>
   <footer
-    class="h-[390px] bg-footer-bg text-sm"
+    class="bg-footer-bg text-sm"
   >
     <div
-      class="container flex gap-x-32 pt-20 pb-[92px] text-primary h-full"
+      class="container flex gap-x-32 pt-20 pb-[92px] text-primary h-full xl:py-12 xl:gap-x-20 sm:flex-col sm:py-6"
     >
       <div
-        class="w-1/3  flex flex-col justify-between"
+        class="w-1/3 sm:w-full sm:flex sm:flex-col sm:items-center"
       >
         <a
           class="flex items-center text-sm font-quaternary-bold"
@@ -46,29 +46,34 @@ exports[`Footer Component renders correctly 1`] = `
               stroke-width="3.56"
             />
           </svg>
-           mangcoding Store
+           
+          <span
+            class="sm:hidden"
+          >
+            mangcoding Store
+          </span>
         </a>
         <p
-          class="leading-6 font-primary-regular"
+          class="mt-6 leading-6 font-primary-regular sm:text-center"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, justo nec porttitor auctor, erat sapien faucibus lectus, vel tempor dolor augue et lectus.
         </p>
         <div
-          class="bg-primary w-fit"
+          class="mt-10 bg-primary w-fit"
         >
           <button
-            class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 text-transparent font-primary-bold bg-clip-text bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-primary"
+            class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 text-transparent font-primary-bold bg-clip-text bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-primary sm:w-[140px]"
           >
             Login Now
           </button>
         </div>
       </div>
       <div
-        class="w-2/3 flex gap-x-20"
+        class="w-2/3 flex gap-x-20 xl:gap-x-16 md:flex-wrap md:gap-y-10 sm:mt-6 sm:w-full sm:gap-y-4 sm:justify-center"
       >
         <div>
           <p
-            class="mb-6 text-md font-primary-bold"
+            class="mb-6 text-md font-primary-bold sm:text-center"
           >
             Home
           </p>
@@ -77,22 +82,22 @@ exports[`Footer Component renders correctly 1`] = `
             class="flex flex-col gap-3"
           >
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Product
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Categories
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Shop
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Login
             </li>
@@ -100,7 +105,7 @@ exports[`Footer Component renders correctly 1`] = `
         </div>
         <div>
           <p
-            class="mb-6 text-md font-primary-bold"
+            class="mb-6 text-md font-primary-bold sm:text-center"
           >
             Shop
           </p>
@@ -109,22 +114,22 @@ exports[`Footer Component renders correctly 1`] = `
             class="flex flex-col gap-3"
           >
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               T-Shirt
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Jacket
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Shirt
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Jens
             </li>
@@ -132,7 +137,7 @@ exports[`Footer Component renders correctly 1`] = `
         </div>
         <div>
           <p
-            class="mb-6 text-md font-primary-bold"
+            class="mb-6 text-md font-primary-bold sm:text-center"
           >
             Categories
           </p>
@@ -141,17 +146,17 @@ exports[`Footer Component renders correctly 1`] = `
             class="flex flex-col gap-3"
           >
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Men
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Children
             </li>
             <li
-              class="hover:cursor-pointer text-sm"
+              class="hover:cursor-pointer sm:text-center text-sm"
             >
               Women
             </li>
@@ -159,7 +164,7 @@ exports[`Footer Component renders correctly 1`] = `
         </div>
         <div>
           <p
-            class="mb-6 text-md font-primary-bold"
+            class="mb-6 text-md font-primary-bold sm:text-center"
           >
             Contact
           </p>
@@ -172,7 +177,7 @@ exports[`Footer Component renders correctly 1`] = `
             class="flex gap-4"
           >
             <li
-              class="hover:cursor-pointer flex justify-center items-center w-8 h-8 border border-primary"
+              class="hover:cursor-pointer sm:text-center flex justify-center items-center w-8 h-8 border border-primary"
             >
               <svg
                 fill="none"
@@ -201,7 +206,7 @@ exports[`Footer Component renders correctly 1`] = `
               </svg>
             </li>
             <li
-              class="hover:cursor-pointer flex justify-center items-center w-8 h-8 border border-primary"
+              class="hover:cursor-pointer sm:text-center flex justify-center items-center w-8 h-8 border border-primary"
             >
               <svg
                 height="1em"
@@ -215,7 +220,7 @@ exports[`Footer Component renders correctly 1`] = `
               </svg>
             </li>
             <li
-              class="hover:cursor-pointer flex justify-center items-center w-8 h-8 border border-primary"
+              class="hover:cursor-pointer sm:text-center flex justify-center items-center w-8 h-8 border border-primary"
             >
               <svg
                 height="1em"
@@ -229,7 +234,7 @@ exports[`Footer Component renders correctly 1`] = `
               </svg>
             </li>
             <li
-              class="hover:cursor-pointer flex justify-center items-center w-8 h-8 border border-primary"
+              class="hover:cursor-pointer sm:text-center flex justify-center items-center w-8 h-8 border border-primary"
             >
               <svg
                 height="1em"

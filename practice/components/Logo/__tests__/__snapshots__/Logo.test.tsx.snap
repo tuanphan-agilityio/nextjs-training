@@ -37,7 +37,12 @@ exports[`Logo Component renders correctly 1`] = `
         stroke-width="3.56"
       />
     </svg>
-     mangcoding Store
+     
+    <span
+      class="sm:hidden"
+    >
+      mangcoding Store
+    </span>
   </a>
 </div>
 `;

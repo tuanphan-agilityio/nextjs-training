@@ -28,8 +28,8 @@ const ProductCard: FC<ProductCardProps> = ({
         query: { productId: id },
       }}
     >
-      <a>
-        <section className='w-[256px] bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer'>
+      <a className='block w-product-card sm:w-full'>
+        <section className='bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer'>
           <Image
             src={imgHref || '/images/default.png'}
             alt={name}
@@ -37,7 +37,7 @@ const ProductCard: FC<ProductCardProps> = ({
             height={'248px'}
           />
           <div className='px-4 pt-4 pb-6 '>
-            <div className='flex justify-between items-center mb-2 font-primary-bold'>
+            <div className='flex justify-between items-center mb-2 font-primary-bold xl:flex-wrap'>
               <h3>{name}</h3>
               <span>{price}$</span>
             </div>

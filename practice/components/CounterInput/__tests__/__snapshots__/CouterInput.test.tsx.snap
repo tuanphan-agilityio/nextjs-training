@@ -3,16 +3,16 @@
 exports[`CounterInput Component matches the snapshot 1`] = `
 <div>
   <div
-    class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary"
+    class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary sm:h-8"
   >
     <button
-      class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+      class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7"
     >
       -
     </button>
     
     <div
-      class="flex px-4 py-2 w-full bg-primary"
+      class="flex px-4 py-2 w-full bg-primary sm:h-7"
     >
       <input
         class="block w-full border-none focus:outline-none text-center"
@@ -20,7 +20,7 @@ exports[`CounterInput Component matches the snapshot 1`] = `
       />
     </div>
     <button
-      class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+      class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7"
     >
       +
     </button>

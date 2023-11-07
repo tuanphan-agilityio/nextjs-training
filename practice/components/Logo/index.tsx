@@ -9,7 +9,8 @@ const Logo: FC = () => {
   return (
     <Link href={ROUTES.HOME}>
       <a className='flex items-center text-sm font-quaternary-bold'>
-        <LogoIcon className='mr-1' /> mangcoding Store
+        <LogoIcon className='mr-1' />{' '}
+        <span className='sm:hidden'>mangcoding Store</span>
       </a>
     </Link>
   );

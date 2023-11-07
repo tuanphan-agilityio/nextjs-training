@@ -7,15 +7,15 @@ exports[`ProductTab Component should match the snapshot 1`] = `
   >
     <div>
       <ul
-        class="flex justify-center gap-10"
+        class="flex justify-center gap-10 sm:gap-4"
       >
         <li
-          class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer text-quaternary border-b-4 border-quaternary"
+          class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer sm:text-md text-quaternary border-b-4 border-quaternary"
         >
           Description
         </li>
         <li
-          class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer text-tertiary"
+          class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer sm:text-md text-tertiary"
         >
           Review (5)
         </li>
@@ -24,7 +24,7 @@ exports[`ProductTab Component should match the snapshot 1`] = `
         class="mt-4"
       >
         <div
-          class="text-md"
+          class="text-md sm:text-sm"
         >
           <p
             class="text-secondary font-primary-bold"

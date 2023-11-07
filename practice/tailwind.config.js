@@ -6,7 +6,15 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+
   theme: {
+    screens: {
+      '2xl': { max: '1536px' },
+      xl: { max: '1280px' },
+      lg: { max: '1024px' },
+      md: { max: '768px' },
+      sm: { max: '640px' },
+    },
     extend: {
       colors: {
         primary: '#fff',
@@ -37,6 +45,9 @@ module.exports = {
       gradientColorStops: {
         'primary-gradient-start': '#7d89ff',
         'primary-gradient-end': '#ab40ff',
+      },
+      width: {
+        'product-card': 'calc(100% / 3 - 27px)',
       },
     },
   },

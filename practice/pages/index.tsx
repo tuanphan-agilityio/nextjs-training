@@ -66,14 +66,12 @@ const Home: FC<HomeProps> = ({ products, params }) => {
         <title>Products | T-shirt</title>
       </Head>
       <SubHeader title='Cart' breadcrumbItems={breadCrumbItems} />
-      <section className='container py-20'>
-        <h2 className='mb-6 text-3xl font-secondary-bold leading-6'>
-          T - Shirt
-        </h2>
-        <div className='flex gap-12'>
+      <section className='container py-20 xl:py-16 md:py-12 sm:py-4'>
+        <h2 className='mb-6 text-3xl font-secondary-bold'>T - Shirt</h2>
+        <div className='flex gap-12 md:flex-col'>
           <SidebarFilter />
           <div className='text-center'>
-            <article className='flex flex-wrap gap-10 pb-10'>
+            <article className='flex flex-wrap gap-10 pb-10 sm:gap-4'>
               {productData.products.map(
                 ({ id, name, thumbnail, status, price }) => (
                   <ProductCard

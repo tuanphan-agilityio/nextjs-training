@@ -10,7 +10,7 @@ interface NavItemProps {
 const NavItem: FC<NavItemProps> = ({ href, title, isActive }) => {
   return (
     <li className='relative'>
-      <Link href={href}>
+      <Link href={href} prefetch={false}>
         <a
           className={
             isActive

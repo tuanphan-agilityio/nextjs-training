@@ -27,15 +27,13 @@ const ProductInfo: FC<ProductInfoProps> = ({
   onAddToCard,
 }) => {
   return (
-    <div className='container flex gap-10'>
-      <div className='w-1/2'>
+    <div className='container flex gap-10 sm:flex-col sm:gap-4'>
+      <div className='w-1/2 sm:w-full'>
         <PreviewImages imageHrefs={[thumbnail, ...imgHrefs]} />
       </div>
-      <div className='flex flex-col justify-between py-6 w-1/2'>
+      <div className='flex flex-col justify-between py-6 w-1/2 sm:w-full sm:py-0'>
         <div>
-          <h1 className='mb-4 font-secondary-bold text-3xl leading-8'>
-            {name}
-          </h1>
+          <h1 className='mb-4 font-secondary-bold text-2xl'>{name}</h1>
           <p className='text-md leading-6'>{description}</p>
 
           <div className='flex gap-4 items-center mt-6'>
@@ -47,7 +45,7 @@ const ProductInfo: FC<ProductInfoProps> = ({
 
           <div className='mt-7 flex justify-between'>
             <div>
-              <p className='font-primary-bold text-md'>Size</p>
+              <p className='product-attribute-text'>Size</p>
               <ul className='flex gap-3 mt-4'>
                 {SIZES.map((size, index) => (
                   <li
@@ -66,7 +64,7 @@ const ProductInfo: FC<ProductInfoProps> = ({
             </div>
 
             <div>
-              <p className='font-primary-bold text-md'>Stock</p>
+              <p className='product-attribute-text'>Stock</p>
 
               <div className='flex items-center mt-4 text-md text-tertiary leading-6'>
                 ( {stock} ) <TrolleyIcon className='ml-2' />
@@ -76,7 +74,7 @@ const ProductInfo: FC<ProductInfoProps> = ({
         </div>
 
         <div className='w-full'>
-          <p className='font-primary-bold text-md'>Quantity</p>
+          <p className='mt-4 product-attribute-text'>Quantity</p>
 
           <div className='flex justify-between items-center mt-8'>
             <CounterInput
@@ -85,9 +83,7 @@ const ProductInfo: FC<ProductInfoProps> = ({
               maxValue={stock}
               onValueChange={onQuantityChange}
             />
-            <p className='font-secondary-bold text-3xl leading-8 '>
-              ${price} USD
-            </p>
+            <p className='font-secondary-bold text-xl'>${price} USD</p>
           </div>
 
           <div className='flex gap-4 mt-10'>

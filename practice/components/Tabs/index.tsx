@@ -31,12 +31,12 @@ const Tabs: FC<TabsProps> = ({
 
   return (
     <div>
-      <ul className='flex justify-center gap-10'>
+      <ul className='flex justify-center gap-10 sm:gap-4'>
         {items.map(({ id, label }) => (
           <li
             key={id}
             className={clsx([
-              'pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer',
+              'pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer sm:text-md',
               id === activeTab
                 ? 'text-quaternary border-b-4 border-quaternary'
                 : 'text-tertiary',
