@@ -1,5 +1,6 @@
 import { FC, useCallback, useState, useMemo } from 'react';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
 import SubHeader from '@/components/SubHeader';
 import SidebarFilter from '@/components/SidebarFilter';
@@ -61,6 +62,9 @@ const Home: FC<HomeProps> = ({ products, params }) => {
 
   return (
     <main>
+      <Head>
+        <title>Products | T-shirt</title>
+      </Head>
       <SubHeader title='Cart' breadcrumbItems={breadCrumbItems} />
       <section className='container py-20'>
         <h2 className='mb-6 text-3xl font-secondary-bold leading-6'>

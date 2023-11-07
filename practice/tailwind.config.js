@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         primary: '#fff',
         secondary: '#0d1222',
-        tertiary: '#969696',
+        tertiary: '#595959',
         quaternary: '#5463ff',
         quinary: '#f4f4f4',
         'footer-bg': '#393e46',

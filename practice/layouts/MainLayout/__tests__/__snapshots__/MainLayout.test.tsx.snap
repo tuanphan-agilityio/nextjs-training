@@ -3,7 +3,7 @@
 exports[`Main Layout renders correctly 1`] = `
 <div>
   <header
-    class="h-20 shadow-lg shadow-tertiary text-secondary"
+    class="h-20 shadow-lg text-secondary"
   >
     <div
       class="container flex justify-between items-center h-full"
