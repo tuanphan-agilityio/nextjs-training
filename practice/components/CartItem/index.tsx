@@ -39,7 +39,7 @@ const CartItem: FC<CartItemProps> = ({
   }, [onDeleteCartItem, productId]);
 
   return (
-    <ul className='flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center'>
+    <ul className='flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center sm:p-2'>
       <li className='w-1/5'>
         <Image
           width={80}

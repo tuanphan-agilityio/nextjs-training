@@ -60,31 +60,14 @@
   }
 }
 
+@layer base {
+  .container {
+    @apply max-w-[1279px] lg:max-w-[1023px] md:max-w-[767px] sm:max-w-[639px];
+  }
+}
+
 html,
 body {
   font-family: 'Poppins Regular', 'sans-serif';
   font-size: 16px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    padding: 0 12px;
-  }
 }

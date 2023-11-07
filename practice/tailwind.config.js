@@ -15,6 +15,10 @@ module.exports = {
       md: { max: '767px' },
       sm: { max: '639px' },
     },
+    container: {
+      center: true,
+      padding: '1.6rem',
+    },
     extend: {
       colors: {
         primary: '#fff',

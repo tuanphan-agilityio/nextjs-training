@@ -48,7 +48,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
         class="flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl lg:w-full sm:text-sm"
       >
         <ul
-          class="flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center"
+          class="flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center sm:p-2"
         >
           <li
             class="w-1/5"
@@ -176,7 +176,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
           </li>
         </ul>
         <ul
-          class="flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center"
+          class="flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center sm:p-2"
         >
           <li
             class="w-1/5"
@@ -304,7 +304,7 @@ exports[`CartPage Cart Page render correctly products 1`] = `
           </li>
         </ul>
         <ul
-          class="flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center"
+          class="flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center sm:p-2"
         >
           <li
             class="w-1/5"
