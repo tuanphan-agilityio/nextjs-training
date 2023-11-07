@@ -50,6 +50,16 @@
   font-display: swap;
 }
 
+@layer components {
+  .cart-item-subtext {
+    @apply font-secondary-regular text-tertiary text-md sm:text-sm;
+  }
+
+  .product-attribute-text {
+    @apply font-primary-bold text-md;
+  }
+}
+
 html,
 body {
   font-family: 'Poppins Regular', 'sans-serif';
@@ -59,4 +69,22 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 12px;
+  }
 }

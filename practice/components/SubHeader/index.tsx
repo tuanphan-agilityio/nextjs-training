@@ -13,14 +13,16 @@ const SubHeader: FC<SubHeaderProps> = ({
   description = '',
 }) => {
   return (
-    <section className='pt-10 pb-20 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary'>
+    <section className='pt-10 pb-20 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary md:pt-8 md:pb-14 sm:pt-4 sm:pb-4'>
       <div className='container'>
         <Breadcrumb items={breadcrumbItems} />
-        <h1 className='mt-10 text-3xl font-secondary-bold leading-4'>
+        <h1 className='mt-10 text-3xl font-secondary-bold md:mt-6 sm:mt-4'>
           {title}
         </h1>
         {description && (
-          <p className='mt-6 w-[508px] font-md leading-2'>{description}</p>
+          <p className='mt-6 w-[508px] font-md text-justify leading-2 sm:w-full'>
+            {description}
+          </p>
         )}
       </div>
     </section>

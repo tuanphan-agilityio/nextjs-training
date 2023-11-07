@@ -49,7 +49,10 @@ const Modal: FC<ModalProps> = ({
         onClick={onCancel}
       />
       <div
-        className={clsx('relative bg-primary p-6 w-fit rounded-lg', className)}
+        className={clsx(
+          'relative bg-primary p-6 w-fit rounded-lg sm:p-2',
+          className,
+        )}
       >
         {children}
         {isConfirmModal && (

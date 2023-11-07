@@ -4,7 +4,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
 <div>
   <main>
     <div
-      class="container py-10"
+      class="container py-10 xl:py-8 md:6 sm:4"
     >
       <nav
         aria-label="breadcrumb"
@@ -36,10 +36,10 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
       </nav>
     </div>
     <div
-      class="container flex gap-10"
+      class="container flex gap-10 sm:flex-col sm:gap-4"
     >
       <div
-        class="w-1/2"
+        class="w-1/2 sm:w-full"
       >
         <div
           class="flex flex-col gap-6"
@@ -138,11 +138,11 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
         </div>
       </div>
       <div
-        class="flex flex-col justify-between py-6 w-1/2"
+        class="flex flex-col justify-between py-6 w-1/2 sm:w-full sm:py-0"
       >
         <div>
           <h1
-            class="mb-4 font-secondary-bold text-3xl leading-8"
+            class="mb-4 font-secondary-bold text-2xl"
           >
             Smart T-shirt
           </h1>
@@ -179,7 +179,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
           >
             <div>
               <p
-                class="font-primary-bold text-md"
+                class="product-attribute-text"
               >
                 Size
               </p>
@@ -210,7 +210,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
             </div>
             <div>
               <p
-                class="font-primary-bold text-md"
+                class="product-attribute-text"
               >
                 Stock
               </p>
@@ -248,7 +248,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
           class="w-full"
         >
           <p
-            class="font-primary-bold text-md"
+            class="mt-4 product-attribute-text"
           >
             Quantity
           </p>
@@ -256,16 +256,16 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
             class="flex justify-between items-center mt-8"
           >
             <div
-              class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary"
+              class="flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary sm:h-8"
             >
               <button
-                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary hover:cursor-no-drop"
+                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7 hover:cursor-no-drop"
               >
                 -
               </button>
               
               <div
-                class="flex px-4 py-2 w-full bg-primary"
+                class="flex px-4 py-2 w-full bg-primary sm:h-7"
               >
                 <input
                   class="block w-full border-none focus:outline-none text-center"
@@ -273,13 +273,13 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
                 />
               </div>
               <button
-                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary"
+                class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7"
               >
                 +
               </button>
             </div>
             <p
-              class="font-secondary-bold text-3xl leading-8 "
+              class="font-secondary-bold text-xl"
             >
               $
               120
@@ -338,22 +338,22 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
       </div>
     </div>
     <div
-      class="my-20 py-10 bg-quinary"
+      class="my-20 py-10 bg-quinary md:my-10 md:py-6 sm:6 sm:py-4"
     >
       <div
         class="container"
       >
         <div>
           <ul
-            class="flex justify-center gap-10"
+            class="flex justify-center gap-10 sm:gap-4"
           >
             <li
-              class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer text-quaternary border-b-4 border-quaternary"
+              class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer sm:text-md text-quaternary border-b-4 border-quaternary"
             >
               Description
             </li>
             <li
-              class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer text-tertiary"
+              class="pb-2 font-primary-bold text-xl leading-9 hover:cursor-pointer sm:text-md text-tertiary"
             >
               Review (5)
             </li>
@@ -362,7 +362,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
             class="mt-4"
           >
             <div
-              class="text-md"
+              class="text-md sm:text-sm"
             >
               <p
                 class="text-secondary font-primary-bold"

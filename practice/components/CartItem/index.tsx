@@ -39,8 +39,8 @@ const CartItem: FC<CartItemProps> = ({
   }, [onDeleteCartItem, productId]);
 
   return (
-    <ul className='flex justify-between p-10 bg-quinary'>
-      <li className='w-20 h-20'>
+    <ul className='flex gap-4 p-10 bg-quinary xl:p-4 sm:flex-wrap sm:justify-center'>
+      <li className='w-1/5'>
         <Image
           width={80}
           height={80}
@@ -48,23 +48,19 @@ const CartItem: FC<CartItemProps> = ({
           alt='Product'
         />
       </li>
-      <li className='w-[220px]'>
+      <li className='w-2/5'>
         <h3 className='mb-2 truncate'>{name}</h3>
-        <p className='font-secondary-regular text-tertiary text-md'>
-          Color : White
-        </p>
+        <p className='cart-item-subtext'>Color : White</p>
       </li>
-      <li className='w-[152px]'>
+      <li className='w-1/5'>
         <p className='truncate mb-2'>$ {price} USD</p>
-        <p className='font-secondary-regular text-tertiary text-md'>Price</p>
+        <p className='cart-item-subtext'>Price</p>
       </li>
-      <li className='w-[142px]'>
+      <li className='w-1/5 min-w-[142px]'>
         <div className='flex justify-between'>
           <div>
             <p className='truncate mb-2'>{stock}</p>
-            <p className='font-secondary-regular text-tertiary text-md whitespace-nowrap'>
-              In Stock
-            </p>
+            <p className='cart-item-subtext whitespace-nowrap'>In Stock</p>
           </div>
 
           <Button
@@ -77,7 +73,7 @@ const CartItem: FC<CartItemProps> = ({
           </Button>
         </div>
 
-        <div className='mt-11 text-md'>
+        <div className='mt-11 text-md md:mt-6 sm:mt-2 sm:text-sm'>
           <CounterInput
             initialValue={quantity}
             onValueChange={handleQuantityChange}

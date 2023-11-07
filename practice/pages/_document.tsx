@@ -17,10 +17,6 @@ class MyDocument extends Document {
       <Html lang='en'>
         <Head>
           <meta
-            name='viewport'
-            content='initial-scale=1.0, width=device-width'
-          />
-          <meta
             name='description'
             content='Specializes in selling high quality goods'
           />

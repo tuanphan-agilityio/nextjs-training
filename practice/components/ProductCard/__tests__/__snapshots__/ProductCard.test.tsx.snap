@@ -3,10 +3,11 @@
 exports[`ProductCard Component renders correctly with mockProps 1`] = `
 <div>
   <a
+    class="block w-product-card sm:w-full"
     href="/1"
   >
     <section
-      class="w-[256px] bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
+      class="bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
     >
       <div
         style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
@@ -34,7 +35,7 @@ exports[`ProductCard Component renders correctly with mockProps 1`] = `
         class="px-4 pt-4 pb-6 "
       >
         <div
-          class="flex justify-between items-center mb-2 font-primary-bold"
+          class="flex justify-between items-center mb-2 font-primary-bold xl:flex-wrap"
         >
           <h3>
             Product Name

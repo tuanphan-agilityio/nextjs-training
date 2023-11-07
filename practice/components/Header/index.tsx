@@ -3,6 +3,8 @@ import { FC, memo, useMemo } from 'react';
 import Logo from '../Logo';
 import NavItem from '../NavItem';
 
+import BarIcon from '../../public/icons/bar.svg';
+
 import { getNavItems, getControlItems } from './constants';
 
 const Header: FC = () => {
@@ -12,12 +14,12 @@ const Header: FC = () => {
   );
 
   return (
-    <header className='h-20 shadow-lg text-secondary'>
+    <header className='h-20 shadow-lg text-secondary sm:h-14'>
       <div className='container flex justify-between items-center h-full'>
         <Logo />
 
-        <div className='flex gap-10'>
-          <nav aria-label='header-navigation'>
+        <div className='flex gap-10 sm:gap-4'>
+          <nav className='md:hidden' aria-label='header-navigation'>
             <ul className='flex items-center gap-10 h-full font-secondary-regular text-md'>
               {navItems.map(({ title, href }, index) => (
                 <NavItem
@@ -29,14 +31,17 @@ const Header: FC = () => {
               ))}
             </ul>
           </nav>
-
-          <ul className='flex items-center gap-6'>
+          <ul className='flex items-center gap-6 sm:flex-row-reverse sm:gap-1'>
             {controlItems.map((Icon, index) => (
               <li className='hover:cursor-pointer' key={index}>
                 {Icon}
               </li>
             ))}
           </ul>
+
+          <div className='hidden md:flex md:items-center'>
+            <BarIcon />
+          </div>
         </div>
       </div>
     </header>

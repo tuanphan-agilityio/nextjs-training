@@ -54,20 +54,25 @@ const CounterInput: FC<CounterInputProps> = ({
   );
 
   const buttonStyles = clsx(
-    'bg-none text-secondary font-primary-bold hover:bg-quinary',
+    'bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7',
   );
   const isMinValue = count === minValue;
   const isMaxValue = count === maxValue;
 
   return (
-    <div className='flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary'>
+    <div className='flex items-center p-1 w-[142px] font-secondary-bold border border-secondary bg-primary sm:h-8'>
       <Button
         onClick={handleDecrement}
         className={clsx(buttonStyles, isMinValue && 'hover:cursor-no-drop')}
       >
         -
       </Button>
-      <Input align='center' value={count} onChange={handleInputChange} />
+      <Input
+        align='center'
+        value={count}
+        onChange={handleInputChange}
+        className='sm:h-7'
+      />
       <Button
         onClick={handleIncrement}
         className={clsx(buttonStyles, isMaxValue && 'hover:cursor-no-drop')}

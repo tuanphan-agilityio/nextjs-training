@@ -91,7 +91,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
         <Head>
           <title>Product | {product.name}</title>
         </Head>
-        <div className='container py-10'>
+        <div className='container py-10 xl:py-8 md:6 sm:4'>
           <Breadcrumb className='text-secondary' items={breadcrumbs} />
         </div>
         <ProductInfo
@@ -100,7 +100,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
           onAddToCard={handleClickCart}
         />
 
-        <div className='my-20 py-10 bg-quinary'>
+        <div className='my-20 py-10 bg-quinary md:my-10 md:py-6 sm:6 sm:py-4'>
           <ProductTab />
         </div>
       </main>

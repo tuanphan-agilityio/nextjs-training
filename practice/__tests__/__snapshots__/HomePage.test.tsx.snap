@@ -4,7 +4,7 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
 <div>
   <main>
     <section
-      class="pt-10 pb-20 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary"
+      class="pt-10 pb-20 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary md:pt-8 md:pb-14 sm:pt-4 sm:pb-4"
     >
       <div
         class="container"
@@ -23,7 +23,7 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
           </ol>
         </nav>
         <h1
-          class="mt-10 text-3xl font-secondary-bold leading-4"
+          class="mt-10 text-3xl font-secondary-bold md:mt-6 sm:mt-4"
         >
           Cart
         </h1>
@@ -31,15 +31,15 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
       </div>
     </section>
     <section
-      class="container py-20"
+      class="container py-20 xl:py-16 md:py-12 sm:py-4"
     >
       <h2
-        class="mb-6 text-3xl font-secondary-bold leading-6"
+        class="mb-6 text-3xl font-secondary-bold"
       >
         T - Shirt
       </h2>
       <div
-        class="flex gap-12"
+        class="flex gap-12 md:flex-col"
       >
         <div>
           <div
@@ -115,13 +115,14 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
           class="text-center"
         >
           <article
-            class="flex flex-wrap gap-10 pb-10"
+            class="flex flex-wrap gap-10 pb-10 sm:gap-4"
           >
             <a
+              class="block w-product-card sm:w-full"
               href="/1"
             >
               <section
-                class="w-[256px] bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
+                class="bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
               >
                 <div
                   style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
@@ -149,7 +150,7 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
                   class="px-4 pt-4 pb-6 "
                 >
                   <div
-                    class="flex justify-between items-center mb-2 font-primary-bold"
+                    class="flex justify-between items-center mb-2 font-primary-bold xl:flex-wrap"
                   >
                     <h3>
                       Smart T-shirt
@@ -191,10 +192,11 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
               </section>
             </a>
             <a
+              class="block w-product-card sm:w-full"
               href="/2"
             >
               <section
-                class="w-[256px] bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
+                class="bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
               >
                 <div
                   style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
@@ -222,7 +224,7 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
                   class="px-4 pt-4 pb-6 "
                 >
                   <div
-                    class="flex justify-between items-center mb-2 font-primary-bold"
+                    class="flex justify-between items-center mb-2 font-primary-bold xl:flex-wrap"
                   >
                     <h3>
                       Smart T-shirt
@@ -264,10 +266,11 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
               </section>
             </a>
             <a
+              class="block w-product-card sm:w-full"
               href="/3"
             >
               <section
-                class="w-[256px] bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
+                class="bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer"
               >
                 <div
                   style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
@@ -295,7 +298,7 @@ exports[`Home Page Home Page matches DOM Snapshot 1`] = `
                   class="px-4 pt-4 pb-6 "
                 >
                   <div
-                    class="flex justify-between items-center mb-2 font-primary-bold"
+                    class="flex justify-between items-center mb-2 font-primary-bold xl:flex-wrap"
                   >
                     <h3>
                       Smart T-shirt
