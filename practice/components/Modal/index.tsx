@@ -2,6 +2,8 @@ import { FC, ReactNode, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import clsx from 'clsx';
 
+import useEscapeKey from '@/hooks/useEscapeKey';
+
 import Button from '@/components/Button';
 
 interface ModalProps {
@@ -21,27 +23,17 @@ const Modal: FC<ModalProps> = ({
   className,
   isConfirmModal = false,
 }) => {
+  useEscapeKey(onCancel);
+
   useEffect(() => {
-    const handleKeydown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && isOpen) {
-        onCancel();
-      }
-    };
-
-    const enableBodyScroll = () => {
-      document.body.style.overflow = 'auto';
-      document.removeEventListener('keydown', handleKeydown);
-    };
-
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      document.addEventListener('keydown', handleKeydown);
     } else {
-      enableBodyScroll();
+      document.body.style.overflow = 'auto';
     }
 
     return () => {
-      enableBodyScroll();
+      document.body.style.overflow = 'auto';
     };
   }, [isOpen, onCancel]);
 

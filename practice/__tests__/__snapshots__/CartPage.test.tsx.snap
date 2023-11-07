@@ -47,10 +47,10 @@ exports[`CartPage Cart Page render correctly products 1`] = `
       <div
         class="flex flex-col gap-6 w-2/3 font-secondary-bold text-secondary text-xl"
       >
-        <div
+        <ul
           class="flex justify-between p-10 bg-quinary"
         >
-          <div
+          <li
             class="w-20 h-20"
           >
             <div
@@ -75,8 +75,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
               />
             </div>
-          </div>
-          <hgroup
+          </li>
+          <li
             class="w-[220px]"
           >
             <h3
@@ -89,8 +89,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             >
               Color : White
             </p>
-          </hgroup>
-          <div
+          </li>
+          <li
             class="w-[152px]"
           >
             <p
@@ -105,8 +105,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             >
               Price
             </p>
-          </div>
-          <div
+          </li>
+          <li
             class="w-[142px]"
           >
             <div
@@ -172,12 +172,12 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div
+          </li>
+        </ul>
+        <ul
           class="flex justify-between p-10 bg-quinary"
         >
-          <div
+          <li
             class="w-20 h-20"
           >
             <div
@@ -202,8 +202,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
               />
             </div>
-          </div>
-          <hgroup
+          </li>
+          <li
             class="w-[220px]"
           >
             <h3
@@ -216,8 +216,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             >
               Color : White
             </p>
-          </hgroup>
-          <div
+          </li>
+          <li
             class="w-[152px]"
           >
             <p
@@ -232,8 +232,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             >
               Price
             </p>
-          </div>
-          <div
+          </li>
+          <li
             class="w-[142px]"
           >
             <div
@@ -299,12 +299,12 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div
+          </li>
+        </ul>
+        <ul
           class="flex justify-between p-10 bg-quinary"
         >
-          <div
+          <li
             class="w-20 h-20"
           >
             <div
@@ -329,8 +329,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
               />
             </div>
-          </div>
-          <hgroup
+          </li>
+          <li
             class="w-[220px]"
           >
             <h3
@@ -343,8 +343,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             >
               Color : White
             </p>
-          </hgroup>
-          <div
+          </li>
+          <li
             class="w-[152px]"
           >
             <p
@@ -359,8 +359,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
             >
               Price
             </p>
-          </div>
-          <div
+          </li>
+          <li
             class="w-[142px]"
           >
             <div
@@ -426,8 +426,8 @@ exports[`CartPage Cart Page render correctly products 1`] = `
                 </button>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div
         class="py-10 px-6 w-1/3 bg-quinary text-md"

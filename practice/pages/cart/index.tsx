@@ -9,14 +9,13 @@ import CartItem from '@/components/CartItem';
 
 import { LocalStorage } from '@/utils/storage';
 import { transformData } from '@/utils/cart/transformData';
+import { updateLocalStorageCart } from '@/utils/cart/updateLocalStorageCart';
 
 import { STORAGE_KEYS } from '@/constants/storage';
 
 import { CartProductItem, CartStorage } from '@/types/cart';
 
-import { getProductsByIds } from '@/services/product';
-
-import { updateLocalStorageCart } from '@/utils/cart/updateLocalStorageCart';
+import { getProduct } from '@/services/product';
 
 const CartPage: FC = () => {
   const [cart, setCart] = useState<CartProductItem[]>([]);
@@ -113,7 +112,12 @@ const CartPage: FC = () => {
         const quantities = cartStorages.map(
           (cartStorage) => cartStorage.quantity,
         );
-        const data = await getProductsByIds(productIds);
+
+        const data = await Promise.all(
+          productIds.map((productId) => getProduct(productId)),
+        );
+
+        console.log('data', data);
 
         setCart(transformData(data, quantities));
         // eslint-disable-next-line no-empty

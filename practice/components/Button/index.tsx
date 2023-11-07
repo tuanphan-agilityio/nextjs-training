@@ -30,19 +30,11 @@ const Button: FC<ButtonProps> = ({
     className,
   );
 
-  const renderStartIcon = startIcon && (
-    <span className='inline-block mr-5'>{startIcon}</span>
-  );
-
-  const renderEndIcon = endIcon && (
-    <span className='inline-block ml-5'>{endIcon}</span>
-  );
-
   return (
     <button className={buttonClasses} {...props}>
-      {renderStartIcon}
+      {startIcon && <span className='inline-block mr-5'>{startIcon}</span>}
       {children}
-      {renderEndIcon}
+      {endIcon && <span className='inline-block ml-5'>{endIcon}</span>}
     </button>
   );
 };

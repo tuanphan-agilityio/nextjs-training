@@ -30,10 +30,10 @@ const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
     <div className='flex flex-col gap-6'>
       <Image
         src={imageHrefs[currentSlideIdx]}
+        layout='responsive'
         width={588}
         height={400}
         alt='Product'
-        layout='fixed'
         objectFit='cover'
         data-testid={`main-image-${currentSlideIdx}`}
       />
