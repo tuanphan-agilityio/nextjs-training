@@ -68,7 +68,7 @@ const Home: FC<HomeProps> = ({ products, params }) => {
       <SubHeader title='Cart' breadcrumbItems={breadCrumbItems} />
       <section className='container py-20 xl:py-16 md:py-12 sm:py-4'>
         <h2 className='mb-6 text-3xl font-secondary-bold'>T - Shirt</h2>
-        <div className='flex gap-12 md:flex-col'>
+        <div className='flex gap-12 xl:flex-col'>
           <SidebarFilter />
           <div className='text-center'>
             <article className='flex flex-wrap gap-10 pb-10 sm:gap-4'>

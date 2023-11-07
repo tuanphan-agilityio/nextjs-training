@@ -268,6 +268,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
                 class="flex px-4 py-2 w-full bg-primary sm:h-7"
               >
                 <input
+                  aria-label="counter number"
                   class="block w-full border-none focus:outline-none text-center"
                   value="1"
                 />
@@ -299,6 +300,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
               </a>
             </button>
             <button
+              aria-label="add to cart"
               class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary h-[48px] shadow-lg"
             >
               <svg
@@ -373,17 +375,17 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
                 class="mt-5 ml-6 list-disc"
               >
                 <li
-                  class="text-tertiary"
+                  class="text-secondary"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </li>
                 <li
-                  class="text-tertiary"
+                  class="text-secondary"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </li>
                 <li
-                  class="text-tertiary"
+                  class="text-secondary"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </li>

@@ -35,17 +35,17 @@ exports[`ProductTab Component should match the snapshot 1`] = `
             class="mt-5 ml-6 list-disc"
           >
             <li
-              class="text-tertiary"
+              class="text-secondary"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </li>
             <li
-              class="text-tertiary"
+              class="text-secondary"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </li>
             <li
-              class="text-tertiary"
+              class="text-secondary"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </li>

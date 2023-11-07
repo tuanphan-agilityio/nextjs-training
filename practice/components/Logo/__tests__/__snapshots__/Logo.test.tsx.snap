@@ -3,6 +3,7 @@
 exports[`Logo Component renders correctly 1`] = `
 <div>
   <a
+    aria-label="go to home page"
     class="flex items-center text-sm font-quaternary-bold"
     href="/"
   >

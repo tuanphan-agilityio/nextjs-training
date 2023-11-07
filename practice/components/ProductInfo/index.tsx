@@ -93,7 +93,11 @@ const ProductInfo: FC<ProductInfoProps> = ({
               </Link>
             </Button>
 
-            <Button className='h-[48px] shadow-lg' onClick={onAddToCard}>
+            <Button
+              className='h-[48px] shadow-lg'
+              onClick={onAddToCard}
+              aria-label='add to cart'
+            >
               <CartIcon />
             </Button>
           </div>

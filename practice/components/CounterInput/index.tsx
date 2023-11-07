@@ -72,6 +72,7 @@ const CounterInput: FC<CounterInputProps> = ({
         value={count}
         onChange={handleInputChange}
         className='sm:h-7'
+        aria-label='counter number'
       />
       <Button
         onClick={handleIncrement}

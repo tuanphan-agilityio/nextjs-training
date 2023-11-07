@@ -30,6 +30,7 @@ const getControlItems = () => [
     className='max-w-[250px] h-12 rounded-lg border border-1 border-solid border-tertiary sm:w-[180px] sm:h-10'
     placeholder='Search'
     endDecorator={<SearchIcon />}
+    aria-label='search'
   />,
 ];
 
