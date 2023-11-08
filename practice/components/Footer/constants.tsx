@@ -3,6 +3,13 @@ import InstagramIcon from '../../public/icons/instagram.svg';
 import TwitterIcon from '../../public/icons/twitter.svg';
 import LinkedinIcon from '../../public/icons/linkedin.svg';
 
+const ICONS = {
+  Facebook: <FacebookIcon />,
+  Instagram: <InstagramIcon />,
+  Twitter: <TwitterIcon />,
+  Linkedin: <LinkedinIcon />,
+};
+
 const FOOTER_CATEGORIES = [
   {
     title: 'Home',
@@ -19,12 +26,7 @@ const FOOTER_CATEGORIES = [
   {
     isContact: true,
     title: 'Contact',
-    items: [
-      <FacebookIcon />,
-      <TwitterIcon />,
-      <InstagramIcon />,
-      <LinkedinIcon />,
-    ],
+    items: [ICONS.Facebook, ICONS.Twitter, ICONS.Instagram, ICONS.Linkedin],
     email: 'mangcoding@gmail.com',
   },
 ];

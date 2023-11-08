@@ -9,7 +9,7 @@ const Logo: FC = () => {
   return (
     <Link href={ROUTES.HOME}>
       <a
-        aria-label='go to home page'
+        aria-label='mangcoding Store'
         className='flex items-center text-sm font-quaternary-bold'
       >
         <LogoIcon className='mr-1' />{' '}

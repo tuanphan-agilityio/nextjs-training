@@ -51,7 +51,7 @@ exports[`ProductCard Component renders correctly with mockProps 1`] = `
           In Stock
         </p>
         <div
-          class="flex items-center gap-2"
+          class="flex items-center gap-2 flex-wrap"
         >
           <svg
             fill="none"

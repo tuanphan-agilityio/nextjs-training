@@ -1,5 +1,4 @@
 import { FC, memo } from 'react';
-import Link from 'next/link';
 import clsx from 'clsx';
 
 import Button from '@/components/Button';
@@ -7,7 +6,6 @@ import PreviewImages from '@/components/PreviewImages';
 import CounterInput from '@/components/CounterInput';
 
 import { SIZES } from '@/constants/product';
-import { ROUTES } from '@/constants/routes';
 
 import { Product } from '@/types/product';
 
@@ -19,12 +17,14 @@ interface ProductInfoProps {
   product: Omit<Product, 'id' | 'status'>;
   onQuantityChange: (quantity: number) => void;
   onAddToCard: () => void;
+  onCheckoutClick: () => void;
 }
 
 const ProductInfo: FC<ProductInfoProps> = ({
   product: { name, imgHrefs, thumbnail, description, price, stock },
   onQuantityChange,
   onAddToCard,
+  onCheckoutClick,
 }) => {
   return (
     <div className='container flex gap-10 sm:flex-col sm:gap-4'>
@@ -87,10 +87,8 @@ const ProductInfo: FC<ProductInfoProps> = ({
           </div>
 
           <div className='flex gap-4 mt-10'>
-            <Button className='w-full'>
-              <Link href={ROUTES.CART}>
-                <a>Checkout</a>
-              </Link>
+            <Button className='w-full' onClick={onCheckoutClick}>
+              Checkout
             </Button>
 
             <Button

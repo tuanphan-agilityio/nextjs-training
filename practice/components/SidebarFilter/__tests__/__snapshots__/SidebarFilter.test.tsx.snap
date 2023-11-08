@@ -32,42 +32,30 @@ exports[`SidebarFilter Component renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="mt-10"
+      class="mt-10 text-md"
     >
       <p
-        class="mb-3 text-md"
+        class="mb-3"
       >
         Categories
       </p>
       <ul
-        class="flex gap-4 pb-6 border-b-2 border-solid border-tertiary"
+        class="flex gap-6 pb-6 border-b-2 border-solid border-tertiary"
       >
         <li
           class="px-2 py-1 bg-quaternary font-primary-bold text-primary border"
         >
-          <a
-            href="/#"
-          >
-            Men
-          </a>
+          Men
         </li>
         <li
-          class="px-2 py-1 text-secondary border border-tertiary"
+          class="px-2 py-1 text-secondary border border-tertiary hover:cursor-pointer"
         >
-          <a
-            href="/#"
-          >
-            Women
-          </a>
+          Women
         </li>
         <li
-          class="px-2 py-1 text-secondary border border-tertiary"
+          class="px-2 py-1 text-secondary border border-tertiary hover:cursor-pointer"
         >
-          <a
-            href="/#"
-          >
-            Children
-          </a>
+          Children
         </li>
       </ul>
     </div>
