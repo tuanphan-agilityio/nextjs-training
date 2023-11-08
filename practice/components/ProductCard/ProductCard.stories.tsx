@@ -14,5 +14,5 @@ Default.args = {
   name: 'Sample Product',
   price: 100,
   status: 'In Stock',
-  imgHref: '/images/product-1.jpg',
+  imgHref: '/images/product-1.webp',
 };
