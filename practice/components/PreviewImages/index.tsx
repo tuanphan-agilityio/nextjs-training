@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FC, memo, useState } from 'react';
+import { FC, memo, useState, useCallback } from 'react';
 
 interface PreviewImagesProps {
   imageHrefs: string[];
@@ -8,9 +8,16 @@ interface PreviewImagesProps {
 const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
 
-  const handleImageClick = (index: number) => {
+  const handleImageClick = useCallback((index: number) => {
     setCurrentSlideIdx(index);
-  };
+  }, []);
+
+  const handleImageClickWithIndex = useCallback(
+    (index: number) => () => {
+      handleImageClick(index);
+    },
+    [handleImageClick],
+  );
 
   const renderImage = (imageHref: string, index: number) => (
     <Image
@@ -19,7 +26,7 @@ const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
       width={180}
       height={180}
       alt='Product'
-      onClick={() => handleImageClick(index)}
+      onClick={handleImageClickWithIndex(index)}
       objectFit='cover'
       className='hover:cursor-pointer'
       data-testid={`image-${index}`}

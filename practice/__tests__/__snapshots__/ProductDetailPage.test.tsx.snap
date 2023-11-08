@@ -293,11 +293,7 @@ exports[`Product detail page Product detail page matches DOM Snapshot 1`] = `
             <button
               class="inline-flex justify-center items-center w-[180px] h-12 bg-primary font-primary-regular text-md hover:opacity-80 bg-gradient-to-b from-primary-gradient-start to-primary-gradient-end text-primary w-full"
             >
-              <a
-                href="/cart"
-              >
-                Checkout
-              </a>
+              Checkout
             </button>
             <button
               aria-label="add to cart"

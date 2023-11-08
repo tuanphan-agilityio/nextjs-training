@@ -2,6 +2,7 @@ import { FC, useCallback, useMemo, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ToastContainer, toast } from 'react-toastify';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductInfo from '@/components/ProductInfo';
@@ -16,6 +17,7 @@ import { LocalStorage } from '@/utils/storage';
 import { updateCart } from '@/utils/cart/updateCart';
 import { STORAGE_KEYS } from '@/constants/storage';
 import { TOAST_MESSAGES } from '@/constants/message';
+import { ROUTES } from '@/constants/routes';
 
 interface ProductDetailProps {
   product: Product;
@@ -64,13 +66,14 @@ export const getStaticProps: GetStaticProps<ProductDetailProps> = async ({
 };
 
 const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
+  const router = useRouter();
   const counterRef = useRef(1);
 
   const handleQuantityChange = useCallback((quantity: number) => {
     counterRef.current = quantity;
   }, []);
 
-  const handleClickCart = useCallback(() => {
+  const handleCartClick = useCallback(() => {
     const productId = product.id;
     const cart: CartStorage[] = LocalStorage.load(STORAGE_KEYS.CART) ?? [];
 
@@ -79,6 +82,10 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
     LocalStorage.save(STORAGE_KEYS.CART, updatedCart);
     toast.success(TOAST_MESSAGES.UPDATED_CART);
   }, [product.id]);
+
+  const handleCheckoutClick = useCallback(() => {
+    router.push(ROUTES.CART);
+  }, [router]);
 
   const breadcrumbs = useMemo(
     () => [{ label: 'Home', href: '/' }, { label: product.name }],
@@ -97,7 +104,8 @@ const ProductDetail: FC<ProductDetailProps> = ({ product }) => {
         <ProductInfo
           product={product}
           onQuantityChange={handleQuantityChange}
-          onAddToCard={handleClickCart}
+          onAddToCard={handleCartClick}
+          onCheckoutClick={handleCheckoutClick}
         />
 
         <div className='my-20 py-10 bg-quinary md:my-10 md:py-6 sm:6 sm:py-4'>

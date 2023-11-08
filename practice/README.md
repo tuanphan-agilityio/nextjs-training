@@ -62,10 +62,6 @@
 
 - [Trello](https://trello.com/b/pZtSAbWx/react-training).
 
-## Requirements
-
-**TODO: Update this contents**
-
 ## Getting started
 
 - Step 1: Cloning the repo
@@ -78,15 +74,29 @@
 
 - Step 3: Checkout branch `git checkout practice`
 
-- Step 4: Add an .env file in the project with the following content:
+- Step 4: Run server
 
-  **TODO: Update this content after configuring the environment for server side**
+  - Go to the folder server `cd server`
 
-- Step 5: Install package `yarn install`
+  - Install package `yarn install`
 
-- Step 6: Run client `yarn dev`
+  - Run server `yarn start`
 
-- Step 7: Open <http://localhost:3000/> in your browser to see the Weather App.
+- Step 5: Add an .env file in the client configuration:
+
+  - Go to the folder client `cd practice`
+
+  - Add .env file with content:
+
+    `NEXT_PUBLIC_BASE_API_URL = 'http://localhost:3001/'`
+
+- Step 6: Run client
+
+  - Install package `yarn install`
+
+  - Run client `yarn dev`
+
+- Step 7: Open <http://localhost:3000/> in your browser
 
 ## Author
 

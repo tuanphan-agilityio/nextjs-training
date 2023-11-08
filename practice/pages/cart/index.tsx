@@ -2,10 +2,9 @@ import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 
 import SubHeader from '@/components/SubHeader';
-import Button from '@/components/Button';
-import Input from '@/components/Input';
 import Modal from '@/components/Modal';
 import CartItem from '@/components/CartItem';
+import CheckoutCart from '@/components/CheckoutCart';
 
 import { LocalStorage } from '@/utils/storage';
 import { transformData } from '@/utils/cart/transformData';
@@ -69,36 +68,6 @@ const CartPage: FC = () => {
     }
   }, [productIdConsiderDelete, cart]);
 
-  const renderCheckout = useMemo(() => {
-    return (
-      <div className='py-10 px-6 w-1/3 bg-quinary text-md lg:w-full'>
-        <p className='mb-2 font-secondary-bold'>Coupon Code</p>
-        <Input placeholder='Enter your coupon code' />
-
-        <div className='text-right sm:text-center'>
-          <Button className='mt-4'>Check</Button>
-        </div>
-
-        <div className='mt-9 pb-6 flex justify-between border-b-2 border-dashed border-tertiary'>
-          <div>
-            <p className='mb-2 font-secondary-bold'>Subtotal</p>
-            <p className='text-tertiary'>{cart.length} Product</p>
-          </div>
-          <p className='font-secondary-regular'>$ {totalPrice} USD</p>
-        </div>
-
-        <div className='my-6 flex justify-between'>
-          <p className='mb-2 font-secondary-bold'>Total</p>
-          <p className='font-secondary-regular'>$ {totalPrice} USD</p>
-        </div>
-
-        <div className='text-right sm:text-center'>
-          <Button>Checkout</Button>
-        </div>
-      </div>
-    );
-  }, [cart.length, totalPrice]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -157,7 +126,7 @@ const CartPage: FC = () => {
                 ),
               )}
             </div>
-            {renderCheckout}
+            <CheckoutCart cartLength={cart.length} totalPrice={totalPrice} />
           </div>
         </div>
       </main>

@@ -11,6 +11,10 @@ interface CounterInputProps {
   maxValue?: number;
 }
 
+const buttonStyles = clsx(
+  'bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7',
+);
+
 const CounterInput: FC<CounterInputProps> = ({
   initialValue = 0,
   onValueChange = () => {},
@@ -53,9 +57,6 @@ const CounterInput: FC<CounterInputProps> = ({
     [onValueChange, minValue, maxValue],
   );
 
-  const buttonStyles = clsx(
-    'bg-none text-secondary font-primary-bold hover:bg-quinary sm:h-7',
-  );
   const isMinValue = count === minValue;
   const isMaxValue = count === maxValue;
 
