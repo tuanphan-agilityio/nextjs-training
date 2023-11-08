@@ -35,6 +35,7 @@ const ProductCard: FC<ProductCardProps> = ({
             alt={name}
             width={'265px'}
             height={'248px'}
+            priority
           />
           <div className='px-4 pt-4 pb-6 '>
             <div className='flex justify-between items-center mb-2 font-primary-bold xl:flex-wrap'>

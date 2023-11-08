@@ -43,6 +43,7 @@ const PreviewImages: FC<PreviewImagesProps> = ({ imageHrefs }) => {
         alt='Product'
         objectFit='cover'
         data-testid={`main-image-${currentSlideIdx}`}
+        priority
       />
 
       <div className='flex gap-6 w-full overflow-auto'>
