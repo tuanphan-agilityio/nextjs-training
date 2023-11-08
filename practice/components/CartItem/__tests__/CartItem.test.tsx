@@ -10,7 +10,7 @@ const mockCartItem: CartItemProps = {
   quantity: 2,
   onQuantityChange: jest.fn(),
   onDeleteCartItem: jest.fn(),
-  imgHref: '/images/default.webp',
+  imgHref: '/images/default.png',
 };
 
 describe('CartItem component', () => {

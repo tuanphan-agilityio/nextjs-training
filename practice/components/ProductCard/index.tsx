@@ -31,7 +31,7 @@ const ProductCard: FC<ProductCardProps> = ({
       <a className='block w-product-card sm:w-full'>
         <section className='bg-primary text-secondary shadow text-sm hover:shadow-xl hover:cursor-pointer'>
           <Image
-            src={imgHref || '/images/default.webp'}
+            src={imgHref || '/images/default.png'}
             alt={name}
             width={'265px'}
             height={'248px'}
@@ -42,7 +42,7 @@ const ProductCard: FC<ProductCardProps> = ({
               <span>{price}$</span>
             </div>
             <p className='mb-3 text-tertiary text-start'>{status}</p>
-            <div className='flex items-center gap-2 flex-wrap'>
+            <div className='flex items-center gap-2'>
               <RateIcon />
               <span className='text-tertiary font-tertiary-regular'>(1k)</span>
             </div>

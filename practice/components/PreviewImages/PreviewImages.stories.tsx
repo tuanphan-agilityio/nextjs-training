@@ -21,8 +21,8 @@ const Template: Story<PreviewImagesProps> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   imageHrefs: [
-    '/images/product-1.webp',
-    '/images/product-2.webp',
-    '/images/product-3.webp',
+    '/images/product-1.jpg',
+    '/images/product-2.jpg',
+    '/images/product-3.jpg',
   ],
 };
