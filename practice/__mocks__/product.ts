@@ -5,8 +5,8 @@ const MOCK_PRODUCT: Product = {
   name: 'Smart T-shirt',
   price: 120,
   status: 'Best quality',
-  thumbnail: '/images/product-2.webp',
-  imgHrefs: ['/images/product-1.webp', '/images/product-3.webp'],
+  thumbnail: '/images/product-2.jpg',
+  imgHrefs: ['/images/product-1.jpg', '/images/product-3.jpg'],
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget gravida leo, nec iaculis diam. Nam bibendum mi sed sem finibus ullamcorper.',
   stock: 1305,

@@ -8,7 +8,7 @@ describe('ProductCard Component', () => {
     name: 'Product Name',
     price: 99.99,
     status: 'In Stock',
-    imgHref: '/images/product-1.webp',
+    imgHref: '/images/product-1.jpg',
   };
 
   it('renders correctly with mockProps', () => {

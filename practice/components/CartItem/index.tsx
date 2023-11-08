@@ -44,7 +44,7 @@ const CartItem: FC<CartItemProps> = ({
         <Image
           width={80}
           height={80}
-          src={imgHref || '/images/product-1.webp'}
+          src={imgHref || '/images/product-1.jpg'}
           alt='Product'
         />
       </li>
